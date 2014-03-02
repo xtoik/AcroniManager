@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.Core", "AcroniManager.Core\AcroniManager.Core.csproj", "{505DC564-C176-410E-BE9C-97486CCB5F4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.Leechers", "AcroniManager.Leechers\AcroniManager.Leechers.csproj", "{6B55E6C3-348D-4FBF-B252-B814DFC62E32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.Patterns", "AcroniManager.Patterns\AcroniManager.Patterns.csproj", "{54750E93-FA66-408A-9ED6-BEA44557715C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.Patterns.UnitTests", "AcroniManager.Patterns.UnitTests\AcroniManager.Patterns.UnitTests.csproj", "{33A866A3-6AF2-4C24-A5F3-93DC21A862CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.DatabaseBuilder", "AcroniManager.DatabaseBuilder\AcroniManager.DatabaseBuilder.csproj", "{A0E5B5C3-14D2-4378-8F38-397235D1C831}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12546B2E-CD31-4AA8-914E-44ADDDC2637F} = {12546B2E-CD31-4AA8-914E-44ADDDC2637F}
+		{54750E93-FA66-408A-9ED6-BEA44557715C} = {54750E93-FA66-408A-9ED6-BEA44557715C}
+		{6B55E6C3-348D-4FBF-B252-B814DFC62E32} = {6B55E6C3-348D-4FBF-B252-B814DFC62E32}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.Checkers", "AcroniManager.Checkers\AcroniManager.Checkers.csproj", "{12546B2E-CD31-4AA8-914E-44ADDDC2637F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.AcroBrowser", "AcroniManager.AcroBrowser\AcroniManager.AcroBrowser.csproj", "{FF7A517F-CE0B-4C22-B98C-B4FFA28BD3D4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75} = {8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcroniManager.MeaningSelectors", "AcroniManager.MeaningSelectors\AcroniManager.MeaningSelectors.csproj", "{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Licence", "Licence", "{5FD70D8E-A5EA-4CD6-8985-9148E54F0ED9}"
+	ProjectSection(SolutionItems) = preProject
+		EUPL Licence.txt = EUPL Licence.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{505DC564-C176-410E-BE9C-97486CCB5F4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505DC564-C176-410E-BE9C-97486CCB5F4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505DC564-C176-410E-BE9C-97486CCB5F4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505DC564-C176-410E-BE9C-97486CCB5F4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B55E6C3-348D-4FBF-B252-B814DFC62E32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B55E6C3-348D-4FBF-B252-B814DFC62E32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B55E6C3-348D-4FBF-B252-B814DFC62E32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B55E6C3-348D-4FBF-B252-B814DFC62E32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54750E93-FA66-408A-9ED6-BEA44557715C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54750E93-FA66-408A-9ED6-BEA44557715C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54750E93-FA66-408A-9ED6-BEA44557715C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54750E93-FA66-408A-9ED6-BEA44557715C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A866A3-6AF2-4C24-A5F3-93DC21A862CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A866A3-6AF2-4C24-A5F3-93DC21A862CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A866A3-6AF2-4C24-A5F3-93DC21A862CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A866A3-6AF2-4C24-A5F3-93DC21A862CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0E5B5C3-14D2-4378-8F38-397235D1C831}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0E5B5C3-14D2-4378-8F38-397235D1C831}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0E5B5C3-14D2-4378-8F38-397235D1C831}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0E5B5C3-14D2-4378-8F38-397235D1C831}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12546B2E-CD31-4AA8-914E-44ADDDC2637F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12546B2E-CD31-4AA8-914E-44ADDDC2637F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12546B2E-CD31-4AA8-914E-44ADDDC2637F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12546B2E-CD31-4AA8-914E-44ADDDC2637F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7A517F-CE0B-4C22-B98C-B4FFA28BD3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7A517F-CE0B-4C22-B98C-B4FFA28BD3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7A517F-CE0B-4C22-B98C-B4FFA28BD3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7A517F-CE0B-4C22-B98C-B4FFA28BD3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal

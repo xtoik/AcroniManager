@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+/** Copyright 2014 Álvaro Rodríguez Otero and Álvaro Rodrigo Yuste
+*
+* Licensed under the EUPL, Version 1.1 or – as soon they will be
+* approved by the European Commission – subsequent versions of the
+* EUPL (the "Licence");* you may not use this work except in
+* compliance with the Licence.
+* You may obtain a copy of the Licence at:
+*
+* http://www.osor.eu/eupl/european-union-public-licence-eupl-v.1.1
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the Licence is distributed on an "AS
+* IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied.
+* See the Licence for the specific language governing permissions
+* and limitations under the Licence.
+*/
+-->
+<acroniManager xmlns="http://acroniManager.org/AcroniManagerExecutionConfiguration.xsd"
+               acronymRegularExpression="this is a reg exp"
+               acronymGroupName="{acronym}"
+               storeResourceInformation="resourceInformation.txt"
+               testCount="100">
+  <leechers>
+    <leecher class="aaa.bbb.WikiLeecher" source="Wikipedia">
+      <executions>
+        <execution languageCode="es" description="Wikipedia ES Leeching starting by the Acrónimos Category">
+          <parameters>
+            <parameter name="initialCategory" value="Categoría:Acrónimos" />
+            <parameter name="maxDepth" value="20" />
+            <parameter name="wikiUrl" value="www.wikipedia.es"/>
+          </parameters>          
+        </execution>
+        <execution languageCode="en" description="Wikipedia EN Leeching starting by the Acronyms Category">
+          <parameters>
+            <parameter name="initialCategory" value="Category:Acronyms" />
+            <parameter name="maxDepth" value="15" />
+            <parameter name="wikiUrl" value="www.wikipedia.com" />
+          </parameters>
+        </execution>
+      </executions>       
+    </leecher>
+    <leecher class="aaa.ccc.GoogleLeecher" source="Google">
+      <executions>
+        <execution languageCode="es" description="Google Leeching using the 'es acrónimo de' search">
+          <parameters>
+            <parameter name="search" value="es acrónimo de" />
+            <parameter name="urlFormatString" value="www.google.es/?q={0}" />
+          </parameters>
+        </execution>
+      </executions>
+    </leecher>
+  </leechers>
+  <patterns>
+    <pattern class="ddd.eee.FixedSentencePattern">
+      <instanceConfigurations>
+        <instanceConfiguration description="Fixed sentence pattern based on the sentence 'es acrónimo de'">
+          <parameters>
+            <parameter name="patternFormat" value="{acronym} es acrónimo de {definition}" />
+            <parameter name="caseInsensitive" value="true" />
+          </parameters>          
+        </instanceConfiguration>
+        <instanceConfiguration description="Fixed sentence pattern based on the sentence 'acr (significado)'">
+          <parameters>
+            <parameter name="patternFormat" value="{acronym} ({definition})" />
+            <parameter name="caseInsensitive" value="false" />
+          </parameters>
+        </instanceConfiguration>
+      </instanceConfigurations>      
+    </pattern>
+    <pattern class="fff.ggg.AcronymGuesser"/>
+  </patterns>
+  <checkers>
+    <checker class="hhh.iii.CUSiglasValidator" />
+    <checker class="jjj.kkk.GoogleValidator">
+      <instanceConfigurations>
+        <instanceConfiguration>
+          <parameters>
+            <parameter name="url" value="www.google.es" />
+            <parameter name="maxResults" value="20" />
+          </parameters>
+        </instanceConfiguration>
+      </instanceConfigurations>      
+    </checker>
+    <checker class="jjj.kkk.DictionaryValidator" />
+  </checkers>
+  <meaningSelector class="lll.mmm.RankedMeaningSelector"
+                   description="This is a Ranked Meaning Selector Instance">
+    <parameters>
+      <parameter name="sameParagraphWeight" value="10" />
+      <parameter name="numberOfParagraphsBefore" value="1" />
+    </parameters>
+  </meaningSelector>
+</acroniManager>

@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+/** Copyright 2014 Álvaro Rodríguez Otero and Álvaro Rodrigo Yuste
+*
+* Licensed under the EUPL, Version 1.1 or – as soon they will be
+* approved by the European Commission – subsequent versions of the
+* EUPL (the "Licence");* you may not use this work except in
+* compliance with the Licence.
+* You may obtain a copy of the Licence at:
+*
+* http://www.osor.eu/eupl/european-union-public-licence-eupl-v.1.1
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the Licence is distributed on an "AS
+* IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied.
+* See the Licence for the specific language governing permissions
+* and limitations under the Licence.
+*/
+-->
+<xs:schema id="AcroniManagerExecutionConfiguration"
+    targetNamespace="http://acroniManager.org/AcroniManagerExecutionConfiguration.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://acroniManager.org/AcroniManagerExecutionConfiguration.xsd"
+    xmlns:mstns="http://acroniManager.org/AcroniManagerExecutionConfiguration.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="acroniManager">
+    <xs:complexType>
+      <xs:all>        
+        <xs:element minOccurs="0" maxOccurs="1" name="leechers">
+          <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="leecher">
+                <xs:complexType>
+                  <xs:sequence minOccurs="1" maxOccurs="1">
+                    <xs:element minOccurs="1" maxOccurs="1" name="executions">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="1" maxOccurs="1">
+                          <xs:element minOccurs="1" maxOccurs="unbounded" name="execution">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0" maxOccurs="1">
+                                <xs:element minOccurs="1" maxOccurs="1" name="parameters">
+                                  <xs:complexType>
+                                    <xs:sequence minOccurs="1" maxOccurs="1">
+                                      <xs:element minOccurs="1" maxOccurs="unbounded" name="parameter">
+                                        <xs:complexType>
+                                          <xs:attribute name="name" type="xs:string" use="required"/>
+                                          <xs:attribute name="value" type="xs:string" use="required"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="languageCode" type="xs:string" use="required"/>
+                              <xs:attribute name="description" type="xs:string" use="optional"/>
+                            </xs:complexType>                            
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>                  
+                  <xs:attribute name="class" type="xs:string" use="required"/>
+                  <xs:attribute name="source" type="xs:string" use="required"/>
+                </xs:complexType>                
+              </xs:element>
+            </xs:sequence>            
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="patterns">
+          <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="pattern">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0" maxOccurs="1">
+                    <xs:element minOccurs="1" maxOccurs="1" name="instanceConfigurations">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="1" maxOccurs="1">
+                          <xs:element minOccurs="1" maxOccurs="unbounded" name="instanceConfiguration">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0" maxOccurs="1">
+                                <xs:element minOccurs="1" maxOccurs="1" name="parameters">
+                                  <xs:complexType>
+                                    <xs:sequence minOccurs="1" maxOccurs="1">
+                                      <xs:element minOccurs="1" maxOccurs="unbounded" name="parameter">
+                                        <xs:complexType>
+                                          <xs:attribute name="name" type="xs:string" use="required"/>
+                                          <xs:attribute name="value" type="xs:string" use="required"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="description" type="xs:string" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="class" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="checkers">
+          <xs:complexType>
+            <xs:sequence minOccurs="1" maxOccurs="1">
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="checker">
+                <xs:complexType>
+                  <xs:sequence minOccurs="0" maxOccurs="1">
+                    <xs:element minOccurs="1" maxOccurs="1" name="instanceConfigurations">
+                      <xs:complexType>
+                        <xs:sequence minOccurs="1" maxOccurs="1">
+                          <xs:element minOccurs="1" maxOccurs="unbounded" name="instanceConfiguration">
+                            <xs:complexType>
+                              <xs:sequence minOccurs="0" maxOccurs="1">
+                                <xs:element minOccurs="1" maxOccurs="1" name="parameters">
+                                  <xs:complexType>
+                                    <xs:sequence minOccurs="1" maxOccurs="1">
+                                      <xs:element minOccurs="1" maxOccurs="unbounded" name="parameter">
+                                        <xs:complexType>
+                                          <xs:attribute name="name" type="xs:string" use="required"/>
+                                          <xs:attribute name="value" type="xs:string" use="required"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute name="description" type="xs:string" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="class" type="xs:string" use="required"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element minOccurs="0" maxOccurs="1" name="meaningSelector">
+          <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="1">            
+              <xs:element minOccurs="1" maxOccurs="1" name="parameters">
+                <xs:complexType>
+                  <xs:sequence minOccurs="1" maxOccurs="1">
+                    <xs:element minOccurs="1" maxOccurs="unbounded" name="parameter">
+                      <xs:complexType>
+                        <xs:attribute name="name" type="xs:string" use="required"/>
+                        <xs:attribute name="value" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="description" type="xs:string" use="optional"/>
+            <xs:attribute name="class" type="xs:string" use="required"/>            
+          </xs:complexType>
+        </xs:element>
+      </xs:all>
+      <xs:attribute name="acronymRegularExpression" type="xs:string" use="required" />
+      <xs:attribute name="acronymGroupName" type="xs:string" use="required" />
+      <xs:attribute name="testCount" type="xs:int" use="optional"/>
+      <xs:attribute name="storeResourceInformation" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

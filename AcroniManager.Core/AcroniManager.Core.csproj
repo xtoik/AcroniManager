@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{505DC564-C176-410E-BE9C-97486CCB5F4D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcroniManager.Core</RootNamespace>
+    <AssemblyName>AcroniManager.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.0.2\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
+    <Reference Include="IQToolkit">
+      <HintPath>..\packages\LinqToWiki.Core.1.2.3\lib\net40-client\IQToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8854.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8854.1\lib\net40\System.Data.SqlServerCe.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Checker\CheckerBase.cs" />
+    <Compile Include="Common\ConfigurableBase.cs" />
+    <Compile Include="Common\StringTreatment.cs" />
+    <Compile Include="Configuration\AcroniManagerConfigurationSection.cs" />
+    <Compile Include="Configuration\AcroniManagerExecutionConfiguration.cs">
+      <DependentUpon>AcroniManagerExecutionConfiguration.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AcroniManagerDatabaseModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcroniManagerDatabaseModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AcroniManagerDatabaseModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AcroniManagerDatabaseModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AcroniManagerDatabaseModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\AcroniManagerDatabaseModelContainerWrapped.cs" />
+    <Compile Include="Data\Acronym.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Arrangement.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Category.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Configuration.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Crawler.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataContext.cs" />
+    <Compile Include="Data\Execution.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Factory\ConfigurationFactory.cs" />
+    <Compile Include="Data\Factory\ArrangementFactory.cs" />
+    <Compile Include="Data\Factory\CrawlerFactory.cs" />
+    <Compile Include="Data\Factory\ExecutionFactory.cs" />
+    <Compile Include="Data\Factory\MatcherFactory.cs" />
+    <Compile Include="Data\Factory\MeaningFactory.cs" />
+    <Compile Include="Data\Factory\ResourceFactory.cs" />
+    <Compile Include="Data\Factory\ValidatorFactory.cs" />
+    <Compile Include="Data\Matcher.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Meaning.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Parameter.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Resource.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Source.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Validation.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Validator.cs">
+      <DependentUpon>AcroniManagerDatabaseModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Information\FoundAcronym.cs" />
+    <Compile Include="Information\ResourceCategory.cs" />
+    <Compile Include="Inquisitor\AcroInquisitor.cs" />
+    <Compile Include="Leecher\LeechedResourceBase.cs" />
+    <Compile Include="Leecher\LeecherBase.cs" />
+    <Compile Include="Executor\AcroManager.cs" />
+    <Compile Include="Matcher\FoundMatchBase.cs" />
+    <Compile Include="Matcher\PatternBase.cs" />
+    <Compile Include="MeaningSelector\SelectedMeaningBase.cs" />
+    <Compile Include="MeaningSelector\MeaningSelectorBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Information\ResourceInformation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Data\AcroniManagerDatabaseModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AcroniManagerDatabaseModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Configuration\AcroniManagerExecutionConfiguration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\AcroniManagerDatabaseModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AcroniManagerDatabaseModel.Context.cs</LastGenOutput>
+      <DependentUpon>AcroniManagerDatabaseModel.edmx</DependentUpon>
+    </None>
+    <None Include="Data\AcroniManagerDatabaseModel.edmx.diagram">
+      <DependentUpon>AcroniManagerDatabaseModel.edmx</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Data\AcroniManagerDatabaseModel.edmx.sqlce" />
+    <None Include="Data\AcroniManagerDatabaseModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AcroniManagerDatabaseModel.cs</LastGenOutput>
+      <DependentUpon>AcroniManagerDatabaseModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.4.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 4.0 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Configuration\AcroniManagerExecutionConfigurationExample.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\AcroniDatabase.sdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\EUPL Licence.txt">
+      <Link>EUPL Licence.txt</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8854.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8854.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

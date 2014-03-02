@@ -1,0 +1,1026 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+/** Copyright 2014 Álvaro Rodríguez Otero and Álvaro Rodrigo Yuste
+*
+* Licensed under the EUPL, Version 1.1 or – as soon they will be
+* approved by the European Commission – subsequent versions of the
+* EUPL (the "Licence");* you may not use this work except in
+* compliance with the Licence.
+* You may obtain a copy of the Licence at:
+*
+* http://www.osor.eu/eupl/european-union-public-licence-eupl-v.1.1
+*
+* Unless required by applicable law or agreed to in writing,
+* software distributed under the Licence is distributed on an "AS
+* IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied.
+* See the Licence for the specific language governing permissions
+* and limitations under the Licence.
+*/
+-->
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AcroniManagerDatabaseModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AcroniManagerDatabaseModelStoreContainer">
+    <EntitySet Name="AcronymSet" EntityType="AcroniManagerDatabaseModel.Store.AcronymSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MeaningSet" EntityType="AcroniManagerDatabaseModel.Store.MeaningSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CategorySet" EntityType="AcroniManagerDatabaseModel.Store.CategorySet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExecutionSet" EntityType="AcroniManagerDatabaseModel.Store.ExecutionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResourceSet" EntityType="AcroniManagerDatabaseModel.Store.ResourceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CrawlerSet" EntityType="AcroniManagerDatabaseModel.Store.CrawlerSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MatcherSet" EntityType="AcroniManagerDatabaseModel.Store.MatcherSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParameterSet" EntityType="AcroniManagerDatabaseModel.Store.ParameterSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConfigurationSet" EntityType="AcroniManagerDatabaseModel.Store.ConfigurationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SourceSet" EntityType="AcroniManagerDatabaseModel.Store.SourceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ValidatorSet" EntityType="AcroniManagerDatabaseModel.Store.ValidatorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ValidationSet" EntityType="AcroniManagerDatabaseModel.Store.ValidationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ArrangementSet" EntityType="AcroniManagerDatabaseModel.Store.ArrangementSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CategoryMeaning" EntityType="AcroniManagerDatabaseModel.Store.CategoryMeaning" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MeaningResource" EntityType="AcroniManagerDatabaseModel.Store.MeaningResource" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExecutionResource" EntityType="AcroniManagerDatabaseModel.Store.ExecutionResource" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MeaningConfiguration" EntityType="AcroniManagerDatabaseModel.Store.MeaningConfiguration" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ResourceConfiguration" EntityType="AcroniManagerDatabaseModel.Store.ResourceConfiguration" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AcronymMeanings" Association="AcroniManagerDatabaseModel.Store.AcronymMeanings">
+      <End Role="Acronym" EntitySet="AcronymSet" />
+      <End Role="Meaning" EntitySet="MeaningSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryMeaning_Category" Association="AcroniManagerDatabaseModel.Store.FK_CategoryMeaning_Category">
+      <End Role="Category" EntitySet="CategorySet" />
+      <End Role="CategoryMeaning" EntitySet="CategoryMeaning" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CategoryMeaning_Meaning" Association="AcroniManagerDatabaseModel.Store.FK_CategoryMeaning_Meaning">
+      <End Role="Meaning" EntitySet="MeaningSet" />
+      <End Role="CategoryMeaning" EntitySet="CategoryMeaning" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeaningResource_Meaning" Association="AcroniManagerDatabaseModel.Store.FK_MeaningResource_Meaning">
+      <End Role="Meaning" EntitySet="MeaningSet" />
+      <End Role="MeaningResource" EntitySet="MeaningResource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeaningResource_Resource" Association="AcroniManagerDatabaseModel.Store.FK_MeaningResource_Resource">
+      <End Role="Resource" EntitySet="ResourceSet" />
+      <End Role="MeaningResource" EntitySet="MeaningResource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExecutionResource_Execution" Association="AcroniManagerDatabaseModel.Store.FK_ExecutionResource_Execution">
+      <End Role="Execution" EntitySet="ExecutionSet" />
+      <End Role="ExecutionResource" EntitySet="ExecutionResource" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExecutionResource_Resource" Association="AcroniManagerDatabaseModel.Store.FK_ExecutionResource_Resource">
+      <End Role="Resource" EntitySet="ResourceSet" />
+      <End Role="ExecutionResource" EntitySet="ExecutionResource" />
+    </AssociationSet>
+    <AssociationSet Name="CrawlerExecution" Association="AcroniManagerDatabaseModel.Store.CrawlerExecution">
+      <End Role="Crawler" EntitySet="CrawlerSet" />
+      <End Role="Execution" EntitySet="ExecutionSet" />
+    </AssociationSet>
+    <AssociationSet Name="MatcherConfiguration" Association="AcroniManagerDatabaseModel.Store.MatcherConfiguration">
+      <End Role="Matcher" EntitySet="MatcherSet" />
+      <End Role="Configuration" EntitySet="ConfigurationSet" />
+    </AssociationSet>
+    <AssociationSet Name="ConfigurationParameter" Association="AcroniManagerDatabaseModel.Store.ConfigurationParameter">
+      <End Role="Configuration" EntitySet="ConfigurationSet" />
+      <End Role="Parameter" EntitySet="ParameterSet" />
+    </AssociationSet>
+    <AssociationSet Name="ExecutionParameter" Association="AcroniManagerDatabaseModel.Store.ExecutionParameter">
+      <End Role="Execution" EntitySet="ExecutionSet" />
+      <End Role="Parameter" EntitySet="ParameterSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeaningConfiguration_Meaning" Association="AcroniManagerDatabaseModel.Store.FK_MeaningConfiguration_Meaning">
+      <End Role="Meaning" EntitySet="MeaningSet" />
+      <End Role="MeaningConfiguration" EntitySet="MeaningConfiguration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MeaningConfiguration_Configuration" Association="AcroniManagerDatabaseModel.Store.FK_MeaningConfiguration_Configuration">
+      <End Role="Configuration" EntitySet="ConfigurationSet" />
+      <End Role="MeaningConfiguration" EntitySet="MeaningConfiguration" />
+    </AssociationSet>
+    <AssociationSet Name="SourceCrawler" Association="AcroniManagerDatabaseModel.Store.SourceCrawler">
+      <End Role="Source" EntitySet="SourceSet" />
+      <End Role="Crawler" EntitySet="CrawlerSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceConfiguration_Resource" Association="AcroniManagerDatabaseModel.Store.FK_ResourceConfiguration_Resource">
+      <End Role="Resource" EntitySet="ResourceSet" />
+      <End Role="ResourceConfiguration" EntitySet="ResourceConfiguration" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ResourceConfiguration_Configuration" Association="AcroniManagerDatabaseModel.Store.FK_ResourceConfiguration_Configuration">
+      <End Role="Configuration" EntitySet="ConfigurationSet" />
+      <End Role="ResourceConfiguration" EntitySet="ResourceConfiguration" />
+    </AssociationSet>
+    <AssociationSet Name="MeaningValidation" Association="AcroniManagerDatabaseModel.Store.MeaningValidation">
+      <End Role="Meaning" EntitySet="MeaningSet" />
+      <End Role="Validation" EntitySet="ValidationSet" />
+    </AssociationSet>
+    <AssociationSet Name="ValidatorArrangement" Association="AcroniManagerDatabaseModel.Store.ValidatorArrangement">
+      <End Role="Validator" EntitySet="ValidatorSet" />
+      <End Role="Arrangement" EntitySet="ArrangementSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArrangementValidation" Association="AcroniManagerDatabaseModel.Store.ArrangementValidation">
+      <End Role="Arrangement" EntitySet="ArrangementSet" />
+      <End Role="Validation" EntitySet="ValidationSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArrangementParameter" Association="AcroniManagerDatabaseModel.Store.ArrangementParameter">
+      <End Role="Arrangement" EntitySet="ArrangementSet" />
+      <End Role="Parameter" EntitySet="ParameterSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AcronymSet">
+    <Key>
+      <PropertyRef Name="AcronymId" />
+    </Key>
+    <Property Name="AcronymId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caption" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MeaningSet">
+    <Key>
+      <PropertyRef Name="MeaningId" />
+    </Key>
+    <Property Name="MeaningId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caption" Type="nvarchar" Nullable="false" />
+    <Property Name="Acronym_AcronymId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategorySet">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caption" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExecutionSet">
+    <Key>
+      <PropertyRef Name="ExecutionId" />
+    </Key>
+    <Property Name="ExecutionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" />
+    <Property Name="Crawler_CrawlerId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResourceSet">
+    <Key>
+      <PropertyRef Name="ResourceId" />
+    </Key>
+    <Property Name="ResourceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ResourceKey" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CrawlerSet">
+    <Key>
+      <PropertyRef Name="CrawlerId" />
+    </Key>
+    <Property Name="CrawlerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar" Nullable="false" />
+    <Property Name="Source_SourceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MatcherSet">
+    <Key>
+      <PropertyRef Name="MatcherId" />
+    </Key>
+    <Property Name="MatcherId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParameterSet">
+    <Key>
+      <PropertyRef Name="ParameterId" />
+    </Key>
+    <Property Name="ParameterId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+    <Property Name="Value" Type="nvarchar" Nullable="false" />
+    <Property Name="ConfigurationParameter_Parameter_ConfigurationId" Type="int" Nullable="true" />
+    <Property Name="ExecutionParameter_Parameter_ExecutionId" Type="int" Nullable="true" />
+    <Property Name="ArrangementParameter_Parameter_ArrangementId" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ConfigurationSet">
+    <Key>
+      <PropertyRef Name="ConfigurationId" />
+    </Key>
+    <Property Name="ConfigurationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" />
+    <Property Name="Matcher_MatcherId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SourceSet">
+    <Key>
+      <PropertyRef Name="SourceId" />
+    </Key>
+    <Property Name="SourceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ValidatorSet">
+    <Key>
+      <PropertyRef Name="ValidatorId" />
+    </Key>
+    <Property Name="ValidatorId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClassName" Type="nvarchar" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ValidationSet">
+    <Key>
+      <PropertyRef Name="ValidationId" />
+    </Key>
+    <Property Name="ValidationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Validated" Type="bit" Nullable="false" />
+    <Property Name="Meaning_MeaningId" Type="int" Nullable="false" />
+    <Property Name="Arrangement_ArrangementId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ArrangementSet">
+    <Key>
+      <PropertyRef Name="ArrangementId" />
+    </Key>
+    <Property Name="ArrangementId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" />
+    <Property Name="Validator_ValidatorId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CategoryMeaning">
+    <Key>
+      <PropertyRef Name="Categories_CategoryId" />
+      <PropertyRef Name="Meanings_MeaningId" />
+    </Key>
+    <Property Name="Categories_CategoryId" Type="int" Nullable="false" />
+    <Property Name="Meanings_MeaningId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MeaningResource">
+    <Key>
+      <PropertyRef Name="Meanings_MeaningId" />
+      <PropertyRef Name="Resources_ResourceId" />
+    </Key>
+    <Property Name="Meanings_MeaningId" Type="int" Nullable="false" />
+    <Property Name="Resources_ResourceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExecutionResource">
+    <Key>
+      <PropertyRef Name="Executions_ExecutionId" />
+      <PropertyRef Name="Resources_ResourceId" />
+    </Key>
+    <Property Name="Executions_ExecutionId" Type="int" Nullable="false" />
+    <Property Name="Resources_ResourceId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MeaningConfiguration">
+    <Key>
+      <PropertyRef Name="Meanings_MeaningId" />
+      <PropertyRef Name="Configurations_ConfigurationId" />
+    </Key>
+    <Property Name="Meanings_MeaningId" Type="int" Nullable="false" />
+    <Property Name="Configurations_ConfigurationId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ResourceConfiguration">
+    <Key>
+      <PropertyRef Name="Resources_ResourceId" />
+      <PropertyRef Name="Configurations_ConfigurationId" />
+    </Key>
+    <Property Name="Resources_ResourceId" Type="int" Nullable="false" />
+    <Property Name="Configurations_ConfigurationId" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="AcronymMeanings">
+    <End Role="Acronym" Type="AcroniManagerDatabaseModel.Store.AcronymSet" Multiplicity="1" />
+    <End Role="Meaning" Type="AcroniManagerDatabaseModel.Store.MeaningSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Acronym">
+        <PropertyRef Name="AcronymId" />
+      </Principal>
+      <Dependent Role="Meaning">
+        <PropertyRef Name="Acronym_AcronymId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CrawlerExecution">
+    <End Role="Crawler" Type="AcroniManagerDatabaseModel.Store.CrawlerSet" Multiplicity="1" />
+    <End Role="Execution" Type="AcroniManagerDatabaseModel.Store.ExecutionSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Crawler">
+        <PropertyRef Name="CrawlerId" />
+      </Principal>
+      <Dependent Role="Execution">
+        <PropertyRef Name="Crawler_CrawlerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MatcherConfiguration">
+    <End Role="Matcher" Type="AcroniManagerDatabaseModel.Store.MatcherSet" Multiplicity="1" />
+    <End Role="Configuration" Type="AcroniManagerDatabaseModel.Store.ConfigurationSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Matcher">
+        <PropertyRef Name="MatcherId" />
+      </Principal>
+      <Dependent Role="Configuration">
+        <PropertyRef Name="Matcher_MatcherId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ConfigurationParameter">
+    <End Role="Configuration" Type="AcroniManagerDatabaseModel.Store.ConfigurationSet" Multiplicity="0..1" />
+    <End Role="Parameter" Type="AcroniManagerDatabaseModel.Store.ParameterSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Configuration">
+        <PropertyRef Name="ConfigurationId" />
+      </Principal>
+      <Dependent Role="Parameter">
+        <PropertyRef Name="ConfigurationParameter_Parameter_ConfigurationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExecutionParameter">
+    <End Role="Execution" Type="AcroniManagerDatabaseModel.Store.ExecutionSet" Multiplicity="0..1" />
+    <End Role="Parameter" Type="AcroniManagerDatabaseModel.Store.ParameterSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Execution">
+        <PropertyRef Name="ExecutionId" />
+      </Principal>
+      <Dependent Role="Parameter">
+        <PropertyRef Name="ExecutionParameter_Parameter_ExecutionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SourceCrawler">
+    <End Role="Source" Type="AcroniManagerDatabaseModel.Store.SourceSet" Multiplicity="1" />
+    <End Role="Crawler" Type="AcroniManagerDatabaseModel.Store.CrawlerSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Source">
+        <PropertyRef Name="SourceId" />
+      </Principal>
+      <Dependent Role="Crawler">
+        <PropertyRef Name="Source_SourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MeaningValidation">
+    <End Role="Meaning" Type="AcroniManagerDatabaseModel.Store.MeaningSet" Multiplicity="1" />
+    <End Role="Validation" Type="AcroniManagerDatabaseModel.Store.ValidationSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meaning">
+        <PropertyRef Name="MeaningId" />
+      </Principal>
+      <Dependent Role="Validation">
+        <PropertyRef Name="Meaning_MeaningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ValidatorArrangement">
+    <End Role="Validator" Type="AcroniManagerDatabaseModel.Store.ValidatorSet" Multiplicity="1" />
+    <End Role="Arrangement" Type="AcroniManagerDatabaseModel.Store.ArrangementSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Validator">
+        <PropertyRef Name="ValidatorId" />
+      </Principal>
+      <Dependent Role="Arrangement">
+        <PropertyRef Name="Validator_ValidatorId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArrangementValidation">
+    <End Role="Arrangement" Type="AcroniManagerDatabaseModel.Store.ArrangementSet" Multiplicity="1" />
+    <End Role="Validation" Type="AcroniManagerDatabaseModel.Store.ValidationSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="Validation">
+        <PropertyRef Name="Arrangement_ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArrangementParameter">
+    <End Role="Arrangement" Type="AcroniManagerDatabaseModel.Store.ArrangementSet" Multiplicity="0..1" />
+    <End Role="Parameter" Type="AcroniManagerDatabaseModel.Store.ParameterSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Arrangement">
+        <PropertyRef Name="ArrangementId" />
+      </Principal>
+      <Dependent Role="Parameter">
+        <PropertyRef Name="ArrangementParameter_Parameter_ArrangementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryMeaning_Category">
+    <End Role="Category" Type="AcroniManagerDatabaseModel.Store.CategorySet" Multiplicity="1" />
+    <End Role="CategoryMeaning" Type="AcroniManagerDatabaseModel.Store.CategoryMeaning" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="CategoryMeaning">
+        <PropertyRef Name="Categories_CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CategoryMeaning_Meaning">
+    <End Role="CategoryMeaning" Type="AcroniManagerDatabaseModel.Store.CategoryMeaning" Multiplicity="*" />
+    <End Role="Meaning" Type="AcroniManagerDatabaseModel.Store.MeaningSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Meaning">
+        <PropertyRef Name="MeaningId" />
+      </Principal>
+      <Dependent Role="CategoryMeaning">
+        <PropertyRef Name="Meanings_MeaningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeaningResource_Meaning">
+    <End Role="Meaning" Type="AcroniManagerDatabaseModel.Store.MeaningSet" Multiplicity="1" />
+    <End Role="MeaningResource" Type="AcroniManagerDatabaseModel.Store.MeaningResource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meaning">
+        <PropertyRef Name="MeaningId" />
+      </Principal>
+      <Dependent Role="MeaningResource">
+        <PropertyRef Name="Meanings_MeaningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeaningResource_Resource">
+    <End Role="MeaningResource" Type="AcroniManagerDatabaseModel.Store.MeaningResource" Multiplicity="*" />
+    <End Role="Resource" Type="AcroniManagerDatabaseModel.Store.ResourceSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="MeaningResource">
+        <PropertyRef Name="Resources_ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExecutionResource_Execution">
+    <End Role="Execution" Type="AcroniManagerDatabaseModel.Store.ExecutionSet" Multiplicity="1" />
+    <End Role="ExecutionResource" Type="AcroniManagerDatabaseModel.Store.ExecutionResource" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Execution">
+        <PropertyRef Name="ExecutionId" />
+      </Principal>
+      <Dependent Role="ExecutionResource">
+        <PropertyRef Name="Executions_ExecutionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExecutionResource_Resource">
+    <End Role="ExecutionResource" Type="AcroniManagerDatabaseModel.Store.ExecutionResource" Multiplicity="*" />
+    <End Role="Resource" Type="AcroniManagerDatabaseModel.Store.ResourceSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="ExecutionResource">
+        <PropertyRef Name="Resources_ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeaningConfiguration_Meaning">
+    <End Role="Meaning" Type="AcroniManagerDatabaseModel.Store.MeaningSet" Multiplicity="1" />
+    <End Role="MeaningConfiguration" Type="AcroniManagerDatabaseModel.Store.MeaningConfiguration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meaning">
+        <PropertyRef Name="MeaningId" />
+      </Principal>
+      <Dependent Role="MeaningConfiguration">
+        <PropertyRef Name="Meanings_MeaningId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MeaningConfiguration_Configuration">
+    <End Role="MeaningConfiguration" Type="AcroniManagerDatabaseModel.Store.MeaningConfiguration" Multiplicity="*" />
+    <End Role="Configuration" Type="AcroniManagerDatabaseModel.Store.ConfigurationSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Configuration">
+        <PropertyRef Name="ConfigurationId" />
+      </Principal>
+      <Dependent Role="MeaningConfiguration">
+        <PropertyRef Name="Configurations_ConfigurationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceConfiguration_Resource">
+    <End Role="Resource" Type="AcroniManagerDatabaseModel.Store.ResourceSet" Multiplicity="1" />
+    <End Role="ResourceConfiguration" Type="AcroniManagerDatabaseModel.Store.ResourceConfiguration" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Resource">
+        <PropertyRef Name="ResourceId" />
+      </Principal>
+      <Dependent Role="ResourceConfiguration">
+        <PropertyRef Name="Resources_ResourceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ResourceConfiguration_Configuration">
+    <End Role="ResourceConfiguration" Type="AcroniManagerDatabaseModel.Store.ResourceConfiguration" Multiplicity="*" />
+    <End Role="Configuration" Type="AcroniManagerDatabaseModel.Store.ConfigurationSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Configuration">
+        <PropertyRef Name="ConfigurationId" />
+      </Principal>
+      <Dependent Role="ResourceConfiguration">
+        <PropertyRef Name="Configurations_ConfigurationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="AcroniManagerDatabaseModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="AcroniManagerDatabaseModelContainer" annotation:LazyLoadingEnabled="true" cg:TypeAccess="Internal">
+          <EntitySet Name="AcronymSet" EntityType="AcroniManagerDatabaseModel.Acronym" />
+          <EntitySet Name="MeaningSet" EntityType="AcroniManagerDatabaseModel.Meaning" />
+          <EntitySet Name="CategorySet" EntityType="AcroniManagerDatabaseModel.Category" />
+          <AssociationSet Name="AcronymMeanings" Association="AcroniManagerDatabaseModel.AcronymMeanings">
+            <End Role="Acronym" EntitySet="AcronymSet" />
+            <End Role="Meaning" EntitySet="MeaningSet" />
+          </AssociationSet>
+          <AssociationSet Name="CategoryMeaning" Association="AcroniManagerDatabaseModel.CategoryMeaning">
+            <End Role="Category" EntitySet="CategorySet" />
+            <End Role="Meaning" EntitySet="MeaningSet" />
+          </AssociationSet>
+          <EntitySet Name="ExecutionSet" EntityType="AcroniManagerDatabaseModel.Execution" />
+          <EntitySet Name="ResourceSet" EntityType="AcroniManagerDatabaseModel.Resource" />
+          <AssociationSet Name="MeaningResource" Association="AcroniManagerDatabaseModel.MeaningResource">
+            <End Role="Meaning" EntitySet="MeaningSet" />
+            <End Role="Resource" EntitySet="ResourceSet" />
+          </AssociationSet>
+          <AssociationSet Name="ExecutionResource" Association="AcroniManagerDatabaseModel.ExecutionResource">
+            <End Role="Execution" EntitySet="ExecutionSet" />
+            <End Role="Resource" EntitySet="ResourceSet" />
+          </AssociationSet>
+          <EntitySet Name="CrawlerSet" EntityType="AcroniManagerDatabaseModel.Crawler" />
+          <AssociationSet Name="CrawlerExecution" Association="AcroniManagerDatabaseModel.CrawlerExecution">
+            <End Role="Crawler" EntitySet="CrawlerSet" />
+            <End Role="Execution" EntitySet="ExecutionSet" />
+          </AssociationSet>
+          <EntitySet Name="MatcherSet" EntityType="AcroniManagerDatabaseModel.Matcher" />
+          <EntitySet Name="ParameterSet" EntityType="AcroniManagerDatabaseModel.Parameter" />
+          <EntitySet Name="ConfigurationSet" EntityType="AcroniManagerDatabaseModel.Configuration" />
+          <AssociationSet Name="MatcherConfiguration" Association="AcroniManagerDatabaseModel.MatcherConfiguration">
+            <End Role="Matcher" EntitySet="MatcherSet" />
+            <End Role="Configuration" EntitySet="ConfigurationSet" />
+          </AssociationSet>
+          <AssociationSet Name="ConfigurationParameter" Association="AcroniManagerDatabaseModel.ConfigurationParameter">
+            <End Role="Configuration" EntitySet="ConfigurationSet" />
+            <End Role="Parameter" EntitySet="ParameterSet" />
+          </AssociationSet>
+          <AssociationSet Name="ExecutionParameter" Association="AcroniManagerDatabaseModel.ExecutionParameter">
+            <End Role="Execution" EntitySet="ExecutionSet" />
+            <End Role="Parameter" EntitySet="ParameterSet" />
+          </AssociationSet>
+          <AssociationSet Name="MeaningConfiguration" Association="AcroniManagerDatabaseModel.MeaningConfiguration">
+            <End Role="Meaning" EntitySet="MeaningSet" />
+            <End Role="Configuration" EntitySet="ConfigurationSet" />
+          </AssociationSet>
+          <EntitySet Name="SourceSet" EntityType="AcroniManagerDatabaseModel.Source" />
+          <AssociationSet Name="SourceCrawler" Association="AcroniManagerDatabaseModel.SourceCrawler">
+            <End Role="Source" EntitySet="SourceSet" />
+            <End Role="Crawler" EntitySet="CrawlerSet" />
+          </AssociationSet>
+          <AssociationSet Name="ResourceConfiguration" Association="AcroniManagerDatabaseModel.ResourceConfiguration">
+            <End Role="Resource" EntitySet="ResourceSet" />
+            <End Role="Configuration" EntitySet="ConfigurationSet" />
+          </AssociationSet>
+          <EntitySet Name="ValidatorSet" EntityType="AcroniManagerDatabaseModel.Validator" />
+          <EntitySet Name="ValidationSet" EntityType="AcroniManagerDatabaseModel.Validation" />
+          <AssociationSet Name="MeaningValidation" Association="AcroniManagerDatabaseModel.MeaningValidation">
+            <End Role="Meaning" EntitySet="MeaningSet" />
+            <End Role="Validation" EntitySet="ValidationSet" />
+          </AssociationSet>
+          <EntitySet Name="ArrangementSet" EntityType="AcroniManagerDatabaseModel.Arrangement" />
+          <AssociationSet Name="ValidatorArrangement" Association="AcroniManagerDatabaseModel.ValidatorArrangement">
+            <End Role="Validator" EntitySet="ValidatorSet" />
+            <End Role="Arrangement" EntitySet="ArrangementSet" />
+          </AssociationSet>
+          <AssociationSet Name="ArrangementValidation" Association="AcroniManagerDatabaseModel.ArrangementValidation">
+            <End Role="Arrangement" EntitySet="ArrangementSet" />
+            <End Role="Validation" EntitySet="ValidationSet" />
+          </AssociationSet>
+          <AssociationSet Name="ArrangementParameter" Association="AcroniManagerDatabaseModel.ArrangementParameter">
+            <End Role="Arrangement" EntitySet="ArrangementSet" />
+            <End Role="Parameter" EntitySet="ParameterSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Acronym">
+          <Key>
+            <PropertyRef Name="AcronymId" />
+          </Key>
+          <Property Type="Int32" Name="AcronymId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Caption" Nullable="false" />
+          <NavigationProperty Name="Meanings" Relationship="AcroniManagerDatabaseModel.AcronymMeanings" FromRole="Acronym" ToRole="Meaning" />
+        </EntityType>
+        <EntityType Name="Meaning">
+          <Key>
+            <PropertyRef Name="MeaningId" />
+          </Key>
+          <Property Type="Int32" Name="MeaningId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Acronym" Relationship="AcroniManagerDatabaseModel.AcronymMeanings" FromRole="Meaning" ToRole="Acronym" />
+          <NavigationProperty Name="Categories" Relationship="AcroniManagerDatabaseModel.CategoryMeaning" FromRole="Meaning" ToRole="Category" />
+          <Property Type="String" Name="Caption" Nullable="false" />
+          <NavigationProperty Name="Resources" Relationship="AcroniManagerDatabaseModel.MeaningResource" FromRole="Meaning" ToRole="Resource" />
+          <NavigationProperty Name="Configurations" Relationship="AcroniManagerDatabaseModel.MeaningConfiguration" FromRole="Meaning" ToRole="Configuration" />
+          <NavigationProperty Name="Validations" Relationship="AcroniManagerDatabaseModel.MeaningValidation" FromRole="Meaning" ToRole="Validation" />
+        </EntityType>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="CategoryId" />
+          </Key>
+          <Property Type="Int32" Name="CategoryId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Meanings" Relationship="AcroniManagerDatabaseModel.CategoryMeaning" FromRole="Category" ToRole="Meaning" />
+          <Property Type="String" Name="Caption" Nullable="false" />
+        </EntityType>
+        <Association Name="AcronymMeanings">
+          <End Type="AcroniManagerDatabaseModel.Acronym" Role="Acronym" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Meaning" Role="Meaning" Multiplicity="*" />
+        </Association>
+        <Association Name="CategoryMeaning">
+          <End Type="AcroniManagerDatabaseModel.Category" Role="Category" Multiplicity="*" />
+          <End Type="AcroniManagerDatabaseModel.Meaning" Role="Meaning" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Execution">
+          <Key>
+            <PropertyRef Name="ExecutionId" />
+          </Key>
+          <Property Type="Int32" Name="ExecutionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="LanguageCode" Nullable="false" />
+          <NavigationProperty Name="Resources" Relationship="AcroniManagerDatabaseModel.ExecutionResource" FromRole="Execution" ToRole="Resource" />
+          <NavigationProperty Name="Crawler" Relationship="AcroniManagerDatabaseModel.CrawlerExecution" FromRole="Execution" ToRole="Crawler" />
+          <NavigationProperty Name="Parameters" Relationship="AcroniManagerDatabaseModel.ExecutionParameter" FromRole="Execution" ToRole="Parameter" />
+          <Property Type="String" Name="Description" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="ResourceId" />
+          </Key>
+          <Property Type="Int32" Name="ResourceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ResourceKey" Nullable="false" />
+          <NavigationProperty Name="Meanings" Relationship="AcroniManagerDatabaseModel.MeaningResource" FromRole="Resource" ToRole="Meaning" />
+          <NavigationProperty Name="Executions" Relationship="AcroniManagerDatabaseModel.ExecutionResource" FromRole="Resource" ToRole="Execution" />
+          <NavigationProperty Name="Configurations" Relationship="AcroniManagerDatabaseModel.ResourceConfiguration" FromRole="Resource" ToRole="Configuration" />
+        </EntityType>
+        <Association Name="MeaningResource">
+          <End Type="AcroniManagerDatabaseModel.Meaning" Role="Meaning" Multiplicity="*" />
+          <End Type="AcroniManagerDatabaseModel.Resource" Role="Resource" Multiplicity="*" />
+        </Association>
+        <Association Name="ExecutionResource">
+          <End Type="AcroniManagerDatabaseModel.Execution" Role="Execution" Multiplicity="*" />
+          <End Type="AcroniManagerDatabaseModel.Resource" Role="Resource" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Crawler">
+          <Key>
+            <PropertyRef Name="CrawlerId" />
+          </Key>
+          <Property Type="Int32" Name="CrawlerId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClassName" Nullable="false" />
+          <NavigationProperty Name="Executions" Relationship="AcroniManagerDatabaseModel.CrawlerExecution" FromRole="Crawler" ToRole="Execution" />
+          <NavigationProperty Name="Source" Relationship="AcroniManagerDatabaseModel.SourceCrawler" FromRole="Crawler" ToRole="Source" />
+        </EntityType>
+        <Association Name="CrawlerExecution">
+          <End Type="AcroniManagerDatabaseModel.Crawler" Role="Crawler" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Execution" Role="Execution" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Matcher">
+          <Key>
+            <PropertyRef Name="MatcherId" />
+          </Key>
+          <Property Type="Int32" Name="MatcherId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClassName" Nullable="false" />
+          <NavigationProperty Name="Configurations" Relationship="AcroniManagerDatabaseModel.MatcherConfiguration" FromRole="Matcher" ToRole="Configuration" />
+        </EntityType>
+        <EntityType Name="Parameter">
+          <Key>
+            <PropertyRef Name="ParameterId" />
+          </Key>
+          <Property Type="Int32" Name="ParameterId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="Value" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Configuration">
+          <Key>
+            <PropertyRef Name="ConfigurationId" />
+          </Key>
+          <Property Type="Int32" Name="ConfigurationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Matcher" Relationship="AcroniManagerDatabaseModel.MatcherConfiguration" FromRole="Configuration" ToRole="Matcher" />
+          <NavigationProperty Name="Parameters" Relationship="AcroniManagerDatabaseModel.ConfigurationParameter" FromRole="Configuration" ToRole="Parameter" />
+          <NavigationProperty Name="Meanings" Relationship="AcroniManagerDatabaseModel.MeaningConfiguration" FromRole="Configuration" ToRole="Meaning" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <NavigationProperty Name="Resources" Relationship="AcroniManagerDatabaseModel.ResourceConfiguration" FromRole="Configuration" ToRole="Resource" />
+        </EntityType>
+        <Association Name="MatcherConfiguration">
+          <End Type="AcroniManagerDatabaseModel.Matcher" Role="Matcher" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Configuration" Role="Configuration" Multiplicity="*" />
+        </Association>
+        <Association Name="ConfigurationParameter">
+          <End Type="AcroniManagerDatabaseModel.Configuration" Role="Configuration" Multiplicity="0..1" />
+          <End Type="AcroniManagerDatabaseModel.Parameter" Role="Parameter" Multiplicity="*" />
+        </Association>
+        <Association Name="ExecutionParameter">
+          <End Type="AcroniManagerDatabaseModel.Execution" Role="Execution" Multiplicity="0..1" />
+          <End Type="AcroniManagerDatabaseModel.Parameter" Role="Parameter" Multiplicity="*" />
+        </Association>
+        <Association Name="MeaningConfiguration">
+          <End Type="AcroniManagerDatabaseModel.Meaning" Role="Meaning" Multiplicity="*" />
+          <End Type="AcroniManagerDatabaseModel.Configuration" Role="Configuration" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Source">
+          <Key>
+            <PropertyRef Name="SourceId" />
+          </Key>
+          <Property Type="Int32" Name="SourceId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Crawlers" Relationship="AcroniManagerDatabaseModel.SourceCrawler" FromRole="Source" ToRole="Crawler" />
+        </EntityType>
+        <Association Name="SourceCrawler">
+          <End Type="AcroniManagerDatabaseModel.Source" Role="Source" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Crawler" Role="Crawler" Multiplicity="*" />
+        </Association>
+        <Association Name="ResourceConfiguration">
+          <End Type="AcroniManagerDatabaseModel.Resource" Role="Resource" Multiplicity="*" />
+          <End Type="AcroniManagerDatabaseModel.Configuration" Role="Configuration" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Validator">
+          <Key>
+            <PropertyRef Name="ValidatorId" />
+          </Key>
+          <Property Type="Int32" Name="ValidatorId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClassName" Nullable="false" />
+          <NavigationProperty Name="Arrangements" Relationship="AcroniManagerDatabaseModel.ValidatorArrangement" FromRole="Validator" ToRole="Arrangement" />
+        </EntityType>
+        <EntityType Name="Validation">
+          <Key>
+            <PropertyRef Name="ValidationId" />
+          </Key>
+          <Property Type="Int32" Name="ValidationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Boolean" Name="Validated" Nullable="false" />
+          <NavigationProperty Name="Meaning" Relationship="AcroniManagerDatabaseModel.MeaningValidation" FromRole="Validation" ToRole="Meaning" />
+          <NavigationProperty Name="Arrangement" Relationship="AcroniManagerDatabaseModel.ArrangementValidation" FromRole="Validation" ToRole="Arrangement" />
+        </EntityType>
+        <Association Name="MeaningValidation">
+          <End Type="AcroniManagerDatabaseModel.Meaning" Role="Meaning" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Validation" Role="Validation" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Arrangement">
+          <Key>
+            <PropertyRef Name="ArrangementId" />
+          </Key>
+          <Property Type="Int32" Name="ArrangementId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <NavigationProperty Name="Validator" Relationship="AcroniManagerDatabaseModel.ValidatorArrangement" FromRole="Arrangement" ToRole="Validator" />
+          <NavigationProperty Name="Validations" Relationship="AcroniManagerDatabaseModel.ArrangementValidation" FromRole="Arrangement" ToRole="Validation" />
+          <NavigationProperty Name="Parameters" Relationship="AcroniManagerDatabaseModel.ArrangementParameter" FromRole="Arrangement" ToRole="Parameter" />
+        </EntityType>
+        <Association Name="ValidatorArrangement">
+          <End Type="AcroniManagerDatabaseModel.Validator" Role="Validator" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Arrangement" Role="Arrangement" Multiplicity="*" />
+        </Association>
+        <Association Name="ArrangementValidation">
+          <End Type="AcroniManagerDatabaseModel.Arrangement" Role="Arrangement" Multiplicity="1" />
+          <End Type="AcroniManagerDatabaseModel.Validation" Role="Validation" Multiplicity="*" />
+        </Association>
+        <Association Name="ArrangementParameter">
+          <End Type="AcroniManagerDatabaseModel.Arrangement" Role="Arrangement" Multiplicity="0..1" />
+          <End Type="AcroniManagerDatabaseModel.Parameter" Role="Parameter" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AcroniManagerDatabaseModelStoreContainer" CdmEntityContainer="AcroniManagerDatabaseModelContainer">
+    <EntitySetMapping Name="AcronymSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Acronym)">
+        <MappingFragment StoreEntitySet="AcronymSet">
+          <ScalarProperty Name="AcronymId" ColumnName="AcronymId" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MeaningSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Meaning)">
+        <MappingFragment StoreEntitySet="MeaningSet">
+          <ScalarProperty Name="MeaningId" ColumnName="MeaningId" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CategorySet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Category)">
+        <MappingFragment StoreEntitySet="CategorySet">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Caption" ColumnName="Caption" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExecutionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Execution)">
+        <MappingFragment StoreEntitySet="ExecutionSet">
+          <ScalarProperty Name="ExecutionId" ColumnName="ExecutionId" />
+          <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ResourceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Resource)">
+        <MappingFragment StoreEntitySet="ResourceSet">
+          <ScalarProperty Name="ResourceId" ColumnName="ResourceId" />
+          <ScalarProperty Name="ResourceKey" ColumnName="ResourceKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CrawlerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Crawler)">
+        <MappingFragment StoreEntitySet="CrawlerSet">
+          <ScalarProperty Name="CrawlerId" ColumnName="CrawlerId" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MatcherSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Matcher)">
+        <MappingFragment StoreEntitySet="MatcherSet">
+          <ScalarProperty Name="MatcherId" ColumnName="MatcherId" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParameterSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Parameter)">
+        <MappingFragment StoreEntitySet="ParameterSet">
+          <ScalarProperty Name="ParameterId" ColumnName="ParameterId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConfigurationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Configuration)">
+        <MappingFragment StoreEntitySet="ConfigurationSet">
+          <ScalarProperty Name="ConfigurationId" ColumnName="ConfigurationId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SourceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Source)">
+        <MappingFragment StoreEntitySet="SourceSet">
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValidatorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Validator)">
+        <MappingFragment StoreEntitySet="ValidatorSet">
+          <ScalarProperty Name="ValidatorId" ColumnName="ValidatorId" />
+          <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ValidationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Validation)">
+        <MappingFragment StoreEntitySet="ValidationSet">
+          <ScalarProperty Name="ValidationId" ColumnName="ValidationId" />
+          <ScalarProperty Name="Validated" ColumnName="Validated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArrangementSet">
+      <EntityTypeMapping TypeName="IsTypeOf(AcroniManagerDatabaseModel.Arrangement)">
+        <MappingFragment StoreEntitySet="ArrangementSet">
+          <ScalarProperty Name="ArrangementId" ColumnName="ArrangementId" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AcronymMeanings" TypeName="AcroniManagerDatabaseModel.AcronymMeanings" StoreEntitySet="MeaningSet">
+      <EndProperty Name="Acronym">
+        <ScalarProperty Name="AcronymId" ColumnName="Acronym_AcronymId" />
+      </EndProperty>
+      <EndProperty Name="Meaning">
+        <ScalarProperty Name="MeaningId" ColumnName="MeaningId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CategoryMeaning" TypeName="AcroniManagerDatabaseModel.CategoryMeaning" StoreEntitySet="CategoryMeaning">
+      <EndProperty Name="Category">
+        <ScalarProperty Name="CategoryId" ColumnName="Categories_CategoryId" />
+      </EndProperty>
+      <EndProperty Name="Meaning">
+        <ScalarProperty Name="MeaningId" ColumnName="Meanings_MeaningId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MeaningResource" TypeName="AcroniManagerDatabaseModel.MeaningResource" StoreEntitySet="MeaningResource">
+      <EndProperty Name="Meaning">
+        <ScalarProperty Name="MeaningId" ColumnName="Meanings_MeaningId" />
+      </EndProperty>
+      <EndProperty Name="Resource">
+        <ScalarProperty Name="ResourceId" ColumnName="Resources_ResourceId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ExecutionResource" TypeName="AcroniManagerDatabaseModel.ExecutionResource" StoreEntitySet="ExecutionResource">
+      <EndProperty Name="Execution">
+        <ScalarProperty Name="ExecutionId" ColumnName="Executions_ExecutionId" />
+      </EndProperty>
+      <EndProperty Name="Resource">
+        <ScalarProperty Name="ResourceId" ColumnName="Resources_ResourceId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CrawlerExecution" TypeName="AcroniManagerDatabaseModel.CrawlerExecution" StoreEntitySet="ExecutionSet">
+      <EndProperty Name="Crawler">
+        <ScalarProperty Name="CrawlerId" ColumnName="Crawler_CrawlerId" />
+      </EndProperty>
+      <EndProperty Name="Execution">
+        <ScalarProperty Name="ExecutionId" ColumnName="ExecutionId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MatcherConfiguration" TypeName="AcroniManagerDatabaseModel.MatcherConfiguration" StoreEntitySet="ConfigurationSet">
+      <EndProperty Name="Matcher">
+        <ScalarProperty Name="MatcherId" ColumnName="Matcher_MatcherId" />
+      </EndProperty>
+      <EndProperty Name="Configuration">
+        <ScalarProperty Name="ConfigurationId" ColumnName="ConfigurationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ConfigurationParameter" TypeName="AcroniManagerDatabaseModel.ConfigurationParameter" StoreEntitySet="ParameterSet">
+      <EndProperty Name="Configuration">
+        <ScalarProperty Name="ConfigurationId" ColumnName="ConfigurationParameter_Parameter_ConfigurationId" />
+      </EndProperty>
+      <EndProperty Name="Parameter">
+        <ScalarProperty Name="ParameterId" ColumnName="ParameterId" />
+      </EndProperty>
+      <Condition ColumnName="ConfigurationParameter_Parameter_ConfigurationId" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ExecutionParameter" TypeName="AcroniManagerDatabaseModel.ExecutionParameter" StoreEntitySet="ParameterSet">
+      <EndProperty Name="Execution">
+        <ScalarProperty Name="ExecutionId" ColumnName="ExecutionParameter_Parameter_ExecutionId" />
+      </EndProperty>
+      <EndProperty Name="Parameter">
+        <ScalarProperty Name="ParameterId" ColumnName="ParameterId" />
+      </EndProperty>
+      <Condition ColumnName="ExecutionParameter_Parameter_ExecutionId" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MeaningConfiguration" TypeName="AcroniManagerDatabaseModel.MeaningConfiguration" StoreEntitySet="MeaningConfiguration">
+      <EndProperty Name="Meaning">
+        <ScalarProperty Name="MeaningId" ColumnName="Meanings_MeaningId" />
+      </EndProperty>
+      <EndProperty Name="Configuration">
+        <ScalarProperty Name="ConfigurationId" ColumnName="Configurations_ConfigurationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SourceCrawler" TypeName="AcroniManagerDatabaseModel.SourceCrawler" StoreEntitySet="CrawlerSet">
+      <EndProperty Name="Source">
+        <ScalarProperty Name="SourceId" ColumnName="Source_SourceId" />
+      </EndProperty>
+      <EndProperty Name="Crawler">
+        <ScalarProperty Name="CrawlerId" ColumnName="CrawlerId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ResourceConfiguration" TypeName="AcroniManagerDatabaseModel.ResourceConfiguration" StoreEntitySet="ResourceConfiguration">
+      <EndProperty Name="Resource">
+        <ScalarProperty Name="ResourceId" ColumnName="Resources_ResourceId" />
+      </EndProperty>
+      <EndProperty Name="Configuration">
+        <ScalarProperty Name="ConfigurationId" ColumnName="Configurations_ConfigurationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MeaningValidation" TypeName="AcroniManagerDatabaseModel.MeaningValidation" StoreEntitySet="ValidationSet">
+      <EndProperty Name="Meaning">
+        <ScalarProperty Name="MeaningId" ColumnName="Meaning_MeaningId" />
+      </EndProperty>
+      <EndProperty Name="Validation">
+        <ScalarProperty Name="ValidationId" ColumnName="ValidationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ValidatorArrangement" TypeName="AcroniManagerDatabaseModel.ValidatorArrangement" StoreEntitySet="ArrangementSet">
+      <EndProperty Name="Validator">
+        <ScalarProperty Name="ValidatorId" ColumnName="Validator_ValidatorId" />
+      </EndProperty>
+      <EndProperty Name="Arrangement">
+        <ScalarProperty Name="ArrangementId" ColumnName="ArrangementId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArrangementValidation" TypeName="AcroniManagerDatabaseModel.ArrangementValidation" StoreEntitySet="ValidationSet">
+      <EndProperty Name="Arrangement">
+        <ScalarProperty Name="ArrangementId" ColumnName="Arrangement_ArrangementId" />
+      </EndProperty>
+      <EndProperty Name="Validation">
+        <ScalarProperty Name="ValidationId" ColumnName="ValidationId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArrangementParameter" TypeName="AcroniManagerDatabaseModel.ArrangementParameter" StoreEntitySet="ParameterSet">
+      <EndProperty Name="Arrangement">
+        <ScalarProperty Name="ArrangementId" ColumnName="ArrangementParameter_Parameter_ArrangementId" />
+      </EndProperty>
+      <EndProperty Name="Parameter">
+        <ScalarProperty Name="ParameterId" ColumnName="ParameterId" />
+      </EndProperty>
+      <Condition ColumnName="ArrangementParameter_Parameter_ArrangementId" IsNull="false" />
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

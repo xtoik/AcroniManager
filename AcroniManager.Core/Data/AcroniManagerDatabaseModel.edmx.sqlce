@@ -1,0 +1,630 @@
+-- Copyright 2014 Álvaro Rodríguez Otero and Álvaro Rodrigo Yuste 
+--
+-- Licensed under the EUPL, Version 1.1 or – as soon they will be
+-- approved by the European Commission – subsequent versions of the
+-- EUPL (the "Licence");* you may not use this work except in
+-- compliance with the Licence.
+-- You may obtain a copy of the Licence at:
+--
+-- http://www.osor.eu/eupl/european-union-public-licence-eupl-v.1.1
+--
+-- Unless required by applicable law or agreed to in writing,
+-- software distributed under the Licence is distributed on an "AS
+-- IS" BASIS, * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+-- express or implied.
+-- See the Licence for the specific language governing permissions
+-- and limitations under the Licence.
+--
+
+-- --------------------------------------------------
+-- Entity Designer DDL Script for SQL Server Compact Edition
+-- --------------------------------------------------
+-- Date Created: 02/09/2014 15:08:32
+-- Generated from EDMX file: C:\DROPBOX\Dropbox\UNED\PFC\03 - Desarrollo\AcroniManager\AcroniManager.Core\Data\AcroniManagerDatabaseModel.edmx
+-- --------------------------------------------------
+
+
+-- --------------------------------------------------
+-- Dropping existing FOREIGN KEY constraints
+-- NOTE: if the constraint does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    ALTER TABLE [MeaningSet] DROP CONSTRAINT [FK_AcronymMeanings];
+GO
+    ALTER TABLE [CategoryMeaning] DROP CONSTRAINT [FK_CategoryMeaning_Category];
+GO
+    ALTER TABLE [CategoryMeaning] DROP CONSTRAINT [FK_CategoryMeaning_Meaning];
+GO
+    ALTER TABLE [MeaningResource] DROP CONSTRAINT [FK_MeaningResource_Meaning];
+GO
+    ALTER TABLE [MeaningResource] DROP CONSTRAINT [FK_MeaningResource_Resource];
+GO
+    ALTER TABLE [ExecutionResource] DROP CONSTRAINT [FK_ExecutionResource_Execution];
+GO
+    ALTER TABLE [ExecutionResource] DROP CONSTRAINT [FK_ExecutionResource_Resource];
+GO
+    ALTER TABLE [ExecutionSet] DROP CONSTRAINT [FK_CrawlerExecution];
+GO
+    ALTER TABLE [ConfigurationSet] DROP CONSTRAINT [FK_MatcherConfiguration];
+GO
+    ALTER TABLE [ParameterSet] DROP CONSTRAINT [FK_ConfigurationParameter];
+GO
+    ALTER TABLE [ParameterSet] DROP CONSTRAINT [FK_ExecutionParameter];
+GO
+    ALTER TABLE [MeaningConfiguration] DROP CONSTRAINT [FK_MeaningConfiguration_Meaning];
+GO
+    ALTER TABLE [MeaningConfiguration] DROP CONSTRAINT [FK_MeaningConfiguration_Configuration];
+GO
+    ALTER TABLE [CrawlerSet] DROP CONSTRAINT [FK_SourceCrawler];
+GO
+    ALTER TABLE [ResourceConfiguration] DROP CONSTRAINT [FK_ResourceConfiguration_Resource];
+GO
+    ALTER TABLE [ResourceConfiguration] DROP CONSTRAINT [FK_ResourceConfiguration_Configuration];
+GO
+    ALTER TABLE [ValidationSet] DROP CONSTRAINT [FK_MeaningValidation];
+GO
+    ALTER TABLE [ArrangementSet] DROP CONSTRAINT [FK_ValidatorArrangement];
+GO
+    ALTER TABLE [ValidationSet] DROP CONSTRAINT [FK_ArrangementValidation];
+GO
+    ALTER TABLE [ParameterSet] DROP CONSTRAINT [FK_ArrangementParameter];
+GO
+
+-- --------------------------------------------------
+-- Dropping existing tables
+-- NOTE: if the table does not exist, an ignorable error will be reported.
+-- --------------------------------------------------
+
+    DROP TABLE [AcronymSet];
+GO
+    DROP TABLE [MeaningSet];
+GO
+    DROP TABLE [CategorySet];
+GO
+    DROP TABLE [ExecutionSet];
+GO
+    DROP TABLE [ResourceSet];
+GO
+    DROP TABLE [CrawlerSet];
+GO
+    DROP TABLE [MatcherSet];
+GO
+    DROP TABLE [ParameterSet];
+GO
+    DROP TABLE [ConfigurationSet];
+GO
+    DROP TABLE [SourceSet];
+GO
+    DROP TABLE [ValidatorSet];
+GO
+    DROP TABLE [ValidationSet];
+GO
+    DROP TABLE [ArrangementSet];
+GO
+    DROP TABLE [CategoryMeaning];
+GO
+    DROP TABLE [MeaningResource];
+GO
+    DROP TABLE [ExecutionResource];
+GO
+    DROP TABLE [MeaningConfiguration];
+GO
+    DROP TABLE [ResourceConfiguration];
+GO
+
+-- --------------------------------------------------
+-- Creating all tables
+-- --------------------------------------------------
+
+-- Creating table 'AcronymSet'
+CREATE TABLE [AcronymSet] (
+    [AcronymId] int IDENTITY(1,1) NOT NULL,
+    [Caption] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'MeaningSet'
+CREATE TABLE [MeaningSet] (
+    [MeaningId] int IDENTITY(1,1) NOT NULL,
+    [Caption] nvarchar(4000)  NOT NULL,
+    [Acronym_AcronymId] int  NOT NULL
+);
+GO
+
+-- Creating table 'CategorySet'
+CREATE TABLE [CategorySet] (
+    [CategoryId] int IDENTITY(1,1) NOT NULL,
+    [Caption] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'ExecutionSet'
+CREATE TABLE [ExecutionSet] (
+    [ExecutionId] int IDENTITY(1,1) NOT NULL,
+    [LanguageCode] nvarchar(4000)  NOT NULL,
+    [Description] nvarchar(4000)  NOT NULL,
+    [Crawler_CrawlerId] int  NOT NULL
+);
+GO
+
+-- Creating table 'ResourceSet'
+CREATE TABLE [ResourceSet] (
+    [ResourceId] int IDENTITY(1,1) NOT NULL,
+    [ResourceKey] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'CrawlerSet'
+CREATE TABLE [CrawlerSet] (
+    [CrawlerId] int IDENTITY(1,1) NOT NULL,
+    [ClassName] nvarchar(4000)  NOT NULL,
+    [Source_SourceId] int  NOT NULL
+);
+GO
+
+-- Creating table 'MatcherSet'
+CREATE TABLE [MatcherSet] (
+    [MatcherId] int IDENTITY(1,1) NOT NULL,
+    [ClassName] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'ParameterSet'
+CREATE TABLE [ParameterSet] (
+    [ParameterId] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL,
+    [Value] nvarchar(4000)  NOT NULL,
+    [ConfigurationParameter_Parameter_ConfigurationId] int  NULL,
+    [ExecutionParameter_Parameter_ExecutionId] int  NULL,
+    [ArrangementParameter_Parameter_ArrangementId] int  NULL
+);
+GO
+
+-- Creating table 'ConfigurationSet'
+CREATE TABLE [ConfigurationSet] (
+    [ConfigurationId] int IDENTITY(1,1) NOT NULL,
+    [Description] nvarchar(4000)  NOT NULL,
+    [Matcher_MatcherId] int  NOT NULL
+);
+GO
+
+-- Creating table 'SourceSet'
+CREATE TABLE [SourceSet] (
+    [SourceId] int IDENTITY(1,1) NOT NULL,
+    [Name] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'ValidatorSet'
+CREATE TABLE [ValidatorSet] (
+    [ValidatorId] int IDENTITY(1,1) NOT NULL,
+    [ClassName] nvarchar(4000)  NOT NULL
+);
+GO
+
+-- Creating table 'ValidationSet'
+CREATE TABLE [ValidationSet] (
+    [ValidationId] int IDENTITY(1,1) NOT NULL,
+    [Validated] bit  NOT NULL,
+    [Meaning_MeaningId] int  NOT NULL,
+    [Arrangement_ArrangementId] int  NOT NULL
+);
+GO
+
+-- Creating table 'ArrangementSet'
+CREATE TABLE [ArrangementSet] (
+    [ArrangementId] int IDENTITY(1,1) NOT NULL,
+    [Description] nvarchar(4000)  NOT NULL,
+    [Validator_ValidatorId] int  NOT NULL
+);
+GO
+
+-- Creating table 'CategoryMeaning'
+CREATE TABLE [CategoryMeaning] (
+    [Categories_CategoryId] int  NOT NULL,
+    [Meanings_MeaningId] int  NOT NULL
+);
+GO
+
+-- Creating table 'MeaningResource'
+CREATE TABLE [MeaningResource] (
+    [Meanings_MeaningId] int  NOT NULL,
+    [Resources_ResourceId] int  NOT NULL
+);
+GO
+
+-- Creating table 'ExecutionResource'
+CREATE TABLE [ExecutionResource] (
+    [Executions_ExecutionId] int  NOT NULL,
+    [Resources_ResourceId] int  NOT NULL
+);
+GO
+
+-- Creating table 'MeaningConfiguration'
+CREATE TABLE [MeaningConfiguration] (
+    [Meanings_MeaningId] int  NOT NULL,
+    [Configurations_ConfigurationId] int  NOT NULL
+);
+GO
+
+-- Creating table 'ResourceConfiguration'
+CREATE TABLE [ResourceConfiguration] (
+    [Resources_ResourceId] int  NOT NULL,
+    [Configurations_ConfigurationId] int  NOT NULL
+);
+GO
+
+-- --------------------------------------------------
+-- Creating all PRIMARY KEY constraints
+-- --------------------------------------------------
+
+-- Creating primary key on [AcronymId] in table 'AcronymSet'
+ALTER TABLE [AcronymSet]
+ADD CONSTRAINT [PK_AcronymSet]
+    PRIMARY KEY ([AcronymId] );
+GO
+
+-- Creating primary key on [MeaningId] in table 'MeaningSet'
+ALTER TABLE [MeaningSet]
+ADD CONSTRAINT [PK_MeaningSet]
+    PRIMARY KEY ([MeaningId] );
+GO
+
+-- Creating primary key on [CategoryId] in table 'CategorySet'
+ALTER TABLE [CategorySet]
+ADD CONSTRAINT [PK_CategorySet]
+    PRIMARY KEY ([CategoryId] );
+GO
+
+-- Creating primary key on [ExecutionId] in table 'ExecutionSet'
+ALTER TABLE [ExecutionSet]
+ADD CONSTRAINT [PK_ExecutionSet]
+    PRIMARY KEY ([ExecutionId] );
+GO
+
+-- Creating primary key on [ResourceId] in table 'ResourceSet'
+ALTER TABLE [ResourceSet]
+ADD CONSTRAINT [PK_ResourceSet]
+    PRIMARY KEY ([ResourceId] );
+GO
+
+-- Creating primary key on [CrawlerId] in table 'CrawlerSet'
+ALTER TABLE [CrawlerSet]
+ADD CONSTRAINT [PK_CrawlerSet]
+    PRIMARY KEY ([CrawlerId] );
+GO
+
+-- Creating primary key on [MatcherId] in table 'MatcherSet'
+ALTER TABLE [MatcherSet]
+ADD CONSTRAINT [PK_MatcherSet]
+    PRIMARY KEY ([MatcherId] );
+GO
+
+-- Creating primary key on [ParameterId] in table 'ParameterSet'
+ALTER TABLE [ParameterSet]
+ADD CONSTRAINT [PK_ParameterSet]
+    PRIMARY KEY ([ParameterId] );
+GO
+
+-- Creating primary key on [ConfigurationId] in table 'ConfigurationSet'
+ALTER TABLE [ConfigurationSet]
+ADD CONSTRAINT [PK_ConfigurationSet]
+    PRIMARY KEY ([ConfigurationId] );
+GO
+
+-- Creating primary key on [SourceId] in table 'SourceSet'
+ALTER TABLE [SourceSet]
+ADD CONSTRAINT [PK_SourceSet]
+    PRIMARY KEY ([SourceId] );
+GO
+
+-- Creating primary key on [ValidatorId] in table 'ValidatorSet'
+ALTER TABLE [ValidatorSet]
+ADD CONSTRAINT [PK_ValidatorSet]
+    PRIMARY KEY ([ValidatorId] );
+GO
+
+-- Creating primary key on [ValidationId] in table 'ValidationSet'
+ALTER TABLE [ValidationSet]
+ADD CONSTRAINT [PK_ValidationSet]
+    PRIMARY KEY ([ValidationId] );
+GO
+
+-- Creating primary key on [ArrangementId] in table 'ArrangementSet'
+ALTER TABLE [ArrangementSet]
+ADD CONSTRAINT [PK_ArrangementSet]
+    PRIMARY KEY ([ArrangementId] );
+GO
+
+-- Creating primary key on [Categories_CategoryId], [Meanings_MeaningId] in table 'CategoryMeaning'
+ALTER TABLE [CategoryMeaning]
+ADD CONSTRAINT [PK_CategoryMeaning]
+    PRIMARY KEY ([Categories_CategoryId], [Meanings_MeaningId] );
+GO
+
+-- Creating primary key on [Meanings_MeaningId], [Resources_ResourceId] in table 'MeaningResource'
+ALTER TABLE [MeaningResource]
+ADD CONSTRAINT [PK_MeaningResource]
+    PRIMARY KEY ([Meanings_MeaningId], [Resources_ResourceId] );
+GO
+
+-- Creating primary key on [Executions_ExecutionId], [Resources_ResourceId] in table 'ExecutionResource'
+ALTER TABLE [ExecutionResource]
+ADD CONSTRAINT [PK_ExecutionResource]
+    PRIMARY KEY ([Executions_ExecutionId], [Resources_ResourceId] );
+GO
+
+-- Creating primary key on [Meanings_MeaningId], [Configurations_ConfigurationId] in table 'MeaningConfiguration'
+ALTER TABLE [MeaningConfiguration]
+ADD CONSTRAINT [PK_MeaningConfiguration]
+    PRIMARY KEY ([Meanings_MeaningId], [Configurations_ConfigurationId] );
+GO
+
+-- Creating primary key on [Resources_ResourceId], [Configurations_ConfigurationId] in table 'ResourceConfiguration'
+ALTER TABLE [ResourceConfiguration]
+ADD CONSTRAINT [PK_ResourceConfiguration]
+    PRIMARY KEY ([Resources_ResourceId], [Configurations_ConfigurationId] );
+GO
+
+-- --------------------------------------------------
+-- Creating all FOREIGN KEY constraints
+-- --------------------------------------------------
+
+-- Creating foreign key on [Acronym_AcronymId] in table 'MeaningSet'
+ALTER TABLE [MeaningSet]
+ADD CONSTRAINT [FK_AcronymMeanings]
+    FOREIGN KEY ([Acronym_AcronymId])
+    REFERENCES [AcronymSet]
+        ([AcronymId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_AcronymMeanings'
+CREATE INDEX [IX_FK_AcronymMeanings]
+ON [MeaningSet]
+    ([Acronym_AcronymId]);
+GO
+
+-- Creating foreign key on [Categories_CategoryId] in table 'CategoryMeaning'
+ALTER TABLE [CategoryMeaning]
+ADD CONSTRAINT [FK_CategoryMeaning_Category]
+    FOREIGN KEY ([Categories_CategoryId])
+    REFERENCES [CategorySet]
+        ([CategoryId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Meanings_MeaningId] in table 'CategoryMeaning'
+ALTER TABLE [CategoryMeaning]
+ADD CONSTRAINT [FK_CategoryMeaning_Meaning]
+    FOREIGN KEY ([Meanings_MeaningId])
+    REFERENCES [MeaningSet]
+        ([MeaningId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CategoryMeaning_Meaning'
+CREATE INDEX [IX_FK_CategoryMeaning_Meaning]
+ON [CategoryMeaning]
+    ([Meanings_MeaningId]);
+GO
+
+-- Creating foreign key on [Meanings_MeaningId] in table 'MeaningResource'
+ALTER TABLE [MeaningResource]
+ADD CONSTRAINT [FK_MeaningResource_Meaning]
+    FOREIGN KEY ([Meanings_MeaningId])
+    REFERENCES [MeaningSet]
+        ([MeaningId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Resources_ResourceId] in table 'MeaningResource'
+ALTER TABLE [MeaningResource]
+ADD CONSTRAINT [FK_MeaningResource_Resource]
+    FOREIGN KEY ([Resources_ResourceId])
+    REFERENCES [ResourceSet]
+        ([ResourceId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MeaningResource_Resource'
+CREATE INDEX [IX_FK_MeaningResource_Resource]
+ON [MeaningResource]
+    ([Resources_ResourceId]);
+GO
+
+-- Creating foreign key on [Executions_ExecutionId] in table 'ExecutionResource'
+ALTER TABLE [ExecutionResource]
+ADD CONSTRAINT [FK_ExecutionResource_Execution]
+    FOREIGN KEY ([Executions_ExecutionId])
+    REFERENCES [ExecutionSet]
+        ([ExecutionId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Resources_ResourceId] in table 'ExecutionResource'
+ALTER TABLE [ExecutionResource]
+ADD CONSTRAINT [FK_ExecutionResource_Resource]
+    FOREIGN KEY ([Resources_ResourceId])
+    REFERENCES [ResourceSet]
+        ([ResourceId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ExecutionResource_Resource'
+CREATE INDEX [IX_FK_ExecutionResource_Resource]
+ON [ExecutionResource]
+    ([Resources_ResourceId]);
+GO
+
+-- Creating foreign key on [Crawler_CrawlerId] in table 'ExecutionSet'
+ALTER TABLE [ExecutionSet]
+ADD CONSTRAINT [FK_CrawlerExecution]
+    FOREIGN KEY ([Crawler_CrawlerId])
+    REFERENCES [CrawlerSet]
+        ([CrawlerId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_CrawlerExecution'
+CREATE INDEX [IX_FK_CrawlerExecution]
+ON [ExecutionSet]
+    ([Crawler_CrawlerId]);
+GO
+
+-- Creating foreign key on [Matcher_MatcherId] in table 'ConfigurationSet'
+ALTER TABLE [ConfigurationSet]
+ADD CONSTRAINT [FK_MatcherConfiguration]
+    FOREIGN KEY ([Matcher_MatcherId])
+    REFERENCES [MatcherSet]
+        ([MatcherId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MatcherConfiguration'
+CREATE INDEX [IX_FK_MatcherConfiguration]
+ON [ConfigurationSet]
+    ([Matcher_MatcherId]);
+GO
+
+-- Creating foreign key on [ConfigurationParameter_Parameter_ConfigurationId] in table 'ParameterSet'
+ALTER TABLE [ParameterSet]
+ADD CONSTRAINT [FK_ConfigurationParameter]
+    FOREIGN KEY ([ConfigurationParameter_Parameter_ConfigurationId])
+    REFERENCES [ConfigurationSet]
+        ([ConfigurationId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ConfigurationParameter'
+CREATE INDEX [IX_FK_ConfigurationParameter]
+ON [ParameterSet]
+    ([ConfigurationParameter_Parameter_ConfigurationId]);
+GO
+
+-- Creating foreign key on [ExecutionParameter_Parameter_ExecutionId] in table 'ParameterSet'
+ALTER TABLE [ParameterSet]
+ADD CONSTRAINT [FK_ExecutionParameter]
+    FOREIGN KEY ([ExecutionParameter_Parameter_ExecutionId])
+    REFERENCES [ExecutionSet]
+        ([ExecutionId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ExecutionParameter'
+CREATE INDEX [IX_FK_ExecutionParameter]
+ON [ParameterSet]
+    ([ExecutionParameter_Parameter_ExecutionId]);
+GO
+
+-- Creating foreign key on [Meanings_MeaningId] in table 'MeaningConfiguration'
+ALTER TABLE [MeaningConfiguration]
+ADD CONSTRAINT [FK_MeaningConfiguration_Meaning]
+    FOREIGN KEY ([Meanings_MeaningId])
+    REFERENCES [MeaningSet]
+        ([MeaningId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Configurations_ConfigurationId] in table 'MeaningConfiguration'
+ALTER TABLE [MeaningConfiguration]
+ADD CONSTRAINT [FK_MeaningConfiguration_Configuration]
+    FOREIGN KEY ([Configurations_ConfigurationId])
+    REFERENCES [ConfigurationSet]
+        ([ConfigurationId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MeaningConfiguration_Configuration'
+CREATE INDEX [IX_FK_MeaningConfiguration_Configuration]
+ON [MeaningConfiguration]
+    ([Configurations_ConfigurationId]);
+GO
+
+-- Creating foreign key on [Source_SourceId] in table 'CrawlerSet'
+ALTER TABLE [CrawlerSet]
+ADD CONSTRAINT [FK_SourceCrawler]
+    FOREIGN KEY ([Source_SourceId])
+    REFERENCES [SourceSet]
+        ([SourceId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_SourceCrawler'
+CREATE INDEX [IX_FK_SourceCrawler]
+ON [CrawlerSet]
+    ([Source_SourceId]);
+GO
+
+-- Creating foreign key on [Resources_ResourceId] in table 'ResourceConfiguration'
+ALTER TABLE [ResourceConfiguration]
+ADD CONSTRAINT [FK_ResourceConfiguration_Resource]
+    FOREIGN KEY ([Resources_ResourceId])
+    REFERENCES [ResourceSet]
+        ([ResourceId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating foreign key on [Configurations_ConfigurationId] in table 'ResourceConfiguration'
+ALTER TABLE [ResourceConfiguration]
+ADD CONSTRAINT [FK_ResourceConfiguration_Configuration]
+    FOREIGN KEY ([Configurations_ConfigurationId])
+    REFERENCES [ConfigurationSet]
+        ([ConfigurationId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ResourceConfiguration_Configuration'
+CREATE INDEX [IX_FK_ResourceConfiguration_Configuration]
+ON [ResourceConfiguration]
+    ([Configurations_ConfigurationId]);
+GO
+
+-- Creating foreign key on [Meaning_MeaningId] in table 'ValidationSet'
+ALTER TABLE [ValidationSet]
+ADD CONSTRAINT [FK_MeaningValidation]
+    FOREIGN KEY ([Meaning_MeaningId])
+    REFERENCES [MeaningSet]
+        ([MeaningId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MeaningValidation'
+CREATE INDEX [IX_FK_MeaningValidation]
+ON [ValidationSet]
+    ([Meaning_MeaningId]);
+GO
+
+-- Creating foreign key on [Validator_ValidatorId] in table 'ArrangementSet'
+ALTER TABLE [ArrangementSet]
+ADD CONSTRAINT [FK_ValidatorArrangement]
+    FOREIGN KEY ([Validator_ValidatorId])
+    REFERENCES [ValidatorSet]
+        ([ValidatorId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ValidatorArrangement'
+CREATE INDEX [IX_FK_ValidatorArrangement]
+ON [ArrangementSet]
+    ([Validator_ValidatorId]);
+GO
+
+-- Creating foreign key on [Arrangement_ArrangementId] in table 'ValidationSet'
+ALTER TABLE [ValidationSet]
+ADD CONSTRAINT [FK_ArrangementValidation]
+    FOREIGN KEY ([Arrangement_ArrangementId])
+    REFERENCES [ArrangementSet]
+        ([ArrangementId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ArrangementValidation'
+CREATE INDEX [IX_FK_ArrangementValidation]
+ON [ValidationSet]
+    ([Arrangement_ArrangementId]);
+GO
+
+-- Creating foreign key on [ArrangementParameter_Parameter_ArrangementId] in table 'ParameterSet'
+ALTER TABLE [ParameterSet]
+ADD CONSTRAINT [FK_ArrangementParameter]
+    FOREIGN KEY ([ArrangementParameter_Parameter_ArrangementId])
+    REFERENCES [ArrangementSet]
+        ([ArrangementId])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ArrangementParameter'
+CREATE INDEX [IX_FK_ArrangementParameter]
+ON [ParameterSet]
+    ([ArrangementParameter_Parameter_ArrangementId]);
+GO
+
+-- --------------------------------------------------
+-- Script has ended
+-- --------------------------------------------------

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="db171c3f272b4606bcac4ae6e88d0850" Name="DiagramMain" >
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Acronym" Width="1.125" PointX="1.375" PointY="0.5" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Meaning" Width="1.375" PointX="3.125" PointY="1.5" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Category" Width="1.125" PointX="1.375" PointY="2.375" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.AcronymMeanings" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.CategoryMeaning" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Execution" Width="1.375" PointX="6.875" PointY="0.5" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Resource" Width="1.375" PointX="5" PointY="0.5" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.MeaningResource" ></AssociationConnector>
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ExecutionResource" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Crawler" Width="1.125" PointX="8.875" PointY="0.5" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.CrawlerExecution" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Matcher" Width="1.375" PointX="5" PointY="5.875" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Parameter" Width="1.375" PointX="7" PointY="3.25" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Configuration" Width="1.375" PointX="5" PointY="3.125" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.MatcherConfiguration" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ConfigurationParameter" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ExecutionParameter" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="AcroniManagerDatabaseModel.MeaningConfiguration" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Source" Width="1.5" PointX="8.75" PointY="2.875" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.SourceCrawler" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ResourceConfiguration" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Validator" Width="1.5" PointX="1" PointY="6.75" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Validation" Width="1.5" PointX="3.125" PointY="4.375" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.MeaningValidation" />
+        <EntityTypeShape EntityType="AcroniManagerDatabaseModel.Arrangement" Width="1.5" PointX="3.125" PointY="6.625" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ValidatorArrangement" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ArrangementValidation" />
+        <AssociationConnector Association="AcroniManagerDatabaseModel.ArrangementParameter" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
