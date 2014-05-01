@@ -40,17 +40,12 @@ namespace AcroniManager.Leechers.Wikipedia
         FileTag,
         QuoteTag,
         RedirectTag,
-        CategoryNamePrefix
+        CategoryNamePrefix,
+        BrowsableCategories
     }
 
     public class WikipediaLeecher : LeecherBase
     {
-        #region Constants
-
-        private static readonly string[] _browsableCatergoryNames = { "ACRÓNIMO", "SIGLA", "ABREVIATURA" }; 
-
-        #endregion Constants
-
         #region Fields
 
         private Wiki _wiki;
@@ -62,7 +57,8 @@ namespace AcroniManager.Leechers.Wikipedia
         private bool _cleanContents = true;
         private string _fileTag = "File";
         private string _quoteTag = "quote";
-        private string _redirectTag = "Redirect";        
+        private string _redirectTag = "Redirect";
+        private List<string> _browsableCatergories = new List<string>();
 
         #endregion Fields
 
@@ -78,9 +74,10 @@ namespace AcroniManager.Leechers.Wikipedia
             browsedCategories = new List<WikipediaItem>();
         }
 
-        private static bool categoryNameBrowsable(string categoryName)
+        private bool categoryNameBrowsable(string categoryName)
         {
-            return _browsableCatergoryNames.Any(bcn => categoryName.ToUpperInvariant().Contains(bcn));
+            return !_browsableCatergories.Any()  
+                   || _browsableCatergories.Any(bcn => categoryName.ToUpperInvariant().Contains(bcn));
         }
 
         private IEnumerable<LeechedResourceBase> leechPages(PagesSource<Page> pagesSource, WikipediaItem parent)
@@ -567,6 +564,12 @@ namespace AcroniManager.Leechers.Wikipedia
                         break;
                     case ConfigurationParameter.CategoryNamePrefix:
                         WikipediaCategory.CategoryNamePrefix = CheckIfNotEmpty(name, value);
+                        break;
+                    case ConfigurationParameter.BrowsableCategories:
+                        _browsableCatergories.AddRange(CheckIfNotEmpty(name, value)
+                                                            .Split(',')
+                                                            .Select(x => x.Trim().ToUpperInvariant())
+                                                            .Where(x => !string.IsNullOrWhiteSpace(x)));
                         break;
                     default:
                         base.SetParameter(name, value);

@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1162b887-a514-4796-b433-405fc705860a}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>AcroniManager.Architecture</Name>
+    <RootNamespace>AcroniManager.Architecture</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="CD-AcroniManager.AcroBrowser.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CD-AcroniManager.AcroBrowser.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CD-AcroniManager.AcroBrowser.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="CD-AcroniManager.DatabaseBuilder.componentdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CD-AcroniManager.DatabaseBuilder.componentdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CD-AcroniManager.DatabaseBuilder.componentdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClD-AcroManager.Core.AcroInquisitor.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClD-AcroManager.Core.AcroInquisitor.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClD-AcroManager.Core.AcroInquisitor.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClD-AcroniManager.Core.AcroManager.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClD-AcroniManager.Core.AcroManager.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClD-AcroniManager.Core.AcroManager.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClD-AcroniManager.Core.AcroniManagerConfigurationSection.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClD-AcroniManager.Core.AcroniManagerConfigurationSection.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClD-AcroniManager.Core.AcroniManagerConfigurationSection.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClD-AcroniManager.Core.AcroniManagerDatabaseModelContainer.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClD-AcroniManager.Core.AcroniManagerDatabaseModelContainer.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClD-AcroniManager.Core.AcroniManagerDatabaseModelContainer.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClD-AcroniManager.Leechers.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClD-AcroniManager.Leechers.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClD-AcroniManager.Leechers.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1258.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1303.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1307.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1605.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1834.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1307.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package2_1834.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1307.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package3_1834.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1307.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package4_1834.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package5_1307.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1258.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1259.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1303.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1307.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1312.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1314.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1338.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1547.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1548.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1605.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1834.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SD-AcroniManager.Core.AcroManager.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SD-AcroniManager.Core.AcroManager.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SD-AcroniManager.Core.AcroManager.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UC-AcroniManager.AcroBrowser.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UC-AcroniManager.AcroBrowser.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UC-AcroniManager.AcroBrowser.usecasediagram</DependentUpon>
+    </Content>
+    <Content Include="UC-AcroniManager.DatabaseBuilder.usecasediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UC-AcroniManager.DatabaseBuilder.usecasediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UC-AcroniManager.DatabaseBuilder.usecasediagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\AcroniManager.Architecture.uml">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+</Project>

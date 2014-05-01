@@ -34,8 +34,7 @@ namespace AcroniManager.Core.Matcher
 
         public string Match { get; set; }
         public string Definition { get; set; }
-        public List<ResourceCategory> Categories = new List<ResourceCategory>();
-
+        
         public override string ToString()
         {
             return string.Format("\"{0}\": \"{1}\".", Match, Definition);

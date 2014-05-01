@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="819ccb37-95a0-47d7-9d3f-7a457acaddbf"
+  name="Data"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="77fd3f6a-ee99-4fc1-815f-ec05140157d7"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager.Core.Data"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0e09b44f-c422-4e1f-81a3-ac905f30c825">
+      <profileInstance
+        Id="e86da423-e98c-4095-be07-fa357b0cae7c"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="84d78c7e-2bf9-4899-a2d7-cdf120560f28"
+        LastKnownName="Factory"
+        LastKnownLocation="Package4_1307.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ea98c730-7cd8-4335-b3a8-7e1a467845c0"
+        name="Execution"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1d3ab123-f127-4673-a838-3c7f6ee8e45a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Data Type%3DExecution"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a7e9ca80-c097-4fec-9426-96ad3b0a60e2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="934a8f77-d767-4156-8817-6c2b660d50e8">
+                <propertyInstance
+                  Id="1e7eb2c4-237d-45e8-a4c3-115326238932"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="96e75c30-6834-4658-bbb8-0a399c56962c">
+                <propertyInstance
+                  Id="a8de7eb3-6cc5-4ee0-b1c6-ef1b1436b824"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="696fffcd-d976-4598-8633-9f94ceb7fc0a">
+                <propertyInstance
+                  Id="6dec56d7-ecd6-49fa-b31b-97c5f01e5cab"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4345c6eb-051e-4266-b723-2c44b6f3c11e">
+                <propertyInstance
+                  Id="a5fdb566-fa9d-4d1f-8c60-14bea45fe2a1"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e65e4e8-feee-48cd-8891-09d807ea2561">
+                <propertyInstance
+                  Id="9cae18c2-8665-4780-9002-b4d4b10f9579"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="91e97606-2f6e-4402-a90c-55a3de69ca25"
+        name="Resource"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="52fb493a-e5ac-4824-96b7-ae56121ea93a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Data Type%3DResource"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="73a4fb4f-820b-4e2c-8934-cc5bae2e7c52"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d60978c1-ee7f-4e62-830f-56239cf0f683">
+                <propertyInstance
+                  Id="52d9f869-b5e0-4d10-ab82-00a49641358b"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c9f8fe1-b4ae-48b7-a8a0-5077d22e650e">
+                <propertyInstance
+                  Id="93004f1c-746b-48a0-bd07-fa62e0ca4ef2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="feb2fcd9-c1ea-4a30-ac0b-bee1cb09e13b">
+                <propertyInstance
+                  Id="22d51562-312f-4b51-b0a3-9e073eceab50"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bff9dcf-6560-4575-a03d-607d17eab0dd">
+                <propertyInstance
+                  Id="c566ecba-c443-40fa-a8c7-b284d5aadf8e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7378ad2d-ba5f-47b9-8f05-8e062221d9a5">
+                <propertyInstance
+                  Id="caf0b1df-1818-4814-b94b-a71c8fa7174f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

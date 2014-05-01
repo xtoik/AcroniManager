@@ -1,0 +1,528 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="1ff33b67-c589-4b5c-85fd-694739798987"
+  name="Matcher"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="be4d4bd2-928b-4fb4-9f2b-9b79f30bfe5b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager.Core.Matcher"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="adfc156c-a96b-4ccc-8c0f-b571fd6c8f4d"
+        name="FoundMatchBase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="e7913225-1316-446f-8944-58ab97ff5f42"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="846f3b16-cac3-425a-8b0f-39e14551dda4"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b901c47c-0047-4084-8fee-bfffbe774bed">
+                <propertyInstance
+                  Id="594986cc-ba18-4a35-8d23-85f19020629f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8455f331-0ccd-4959-afc1-420ae9681037">
+                <propertyInstance
+                  Id="fc63c318-e39a-4925-986b-ffd5354551df"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4f35a6bc-5e2d-4ce0-b06a-9a50834126cc">
+                <propertyInstance
+                  Id="04a15772-2257-4a9b-a813-ca8ccae150fd"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af51d7e5-63f9-4f2d-92fe-d2db60b97ce8">
+                <propertyInstance
+                  Id="96b719f6-e8a2-4e63-99a8-58b956cb0c8e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7133686-890c-483f-8015-e63b1da674a3">
+                <propertyInstance
+                  Id="4849e94b-4cbe-4f8e-a101-2d3c9a4d6b60"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="8127f4f0-f8f2-4bc9-81f0-28046741ae88"
+            name="Meaning"
+            visibility="Package"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="af1099ff-758f-4e96-95c0-572305a57538"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase Member%3DMeaning"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6865a081-3050-4c55-8bd3-7d5c45aa02cb"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7b40fe96-0db5-4f64-88f2-8f71407c069b">
+                    <propertyInstance
+                      Id="33996c6d-5ce3-42ec-9b30-31620c4d2cda"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f6e7681-a8f3-48f0-824f-561e15b9440a">
+                    <propertyInstance
+                      Id="9c6166af-90db-4dd5-96df-d37451d5ad83"
+                      name="Get"
+                      value="package" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="76a95f7e-c44f-4945-93da-16afa0b67871">
+                    <propertyInstance
+                      Id="0fd54162-7804-4484-b00c-71358128af53"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2a7d580-bba3-4e18-88d9-2dee1fb9833b">
+                    <propertyInstance
+                      Id="a567403b-e6be-45ee-bb68-96725f02c212"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1fd0cdb-527f-404e-a08d-e147964f0a62">
+                    <propertyInstance
+                      Id="aa80bdaf-b3c1-4664-a108-c4268a4d3e30"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e8caa654-4a23-4a8d-a8ce-be1f20b263ff">
+                    <propertyInstance
+                      Id="0ae85f47-d0a2-4f7b-8f69-b84063fb4968"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="64a9d3a5-9a07-431c-9bec-22bb338bffcc">
+                    <propertyInstance
+                      Id="a540edad-9d89-4bc6-bb2b-4373e7b26166"
+                      name="Set"
+                      value="package" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="46ec9a9c-ef32-4453-8a26-6d5bece61513"
+                LastKnownName="Meaning"
+                LastKnownLocation="Package4_1259.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8afaf8d0-48d2-4bdd-9011-ed0358439540"
+            name="Match"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="ef0d153b-b5ba-41dc-9ad6-ce603c09d283"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase Member%3DMatch"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="31b6dee7-2f2e-40a9-acb1-2599783f8dad"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b6a61493-1eda-407f-91ed-d2599c25cc19">
+                    <propertyInstance
+                      Id="1fc6301e-3bc8-4848-a7dc-b6f2b5fae9ff"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="86aab096-df67-4f21-9d89-5cfe8e314622">
+                    <propertyInstance
+                      Id="354e1f7f-f09a-4ac6-ac5c-311f95e2cb81"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="985b06d0-307d-40f2-808c-b2945694a6c4">
+                    <propertyInstance
+                      Id="db848d86-3b9c-4829-9f3d-0f6d48d55808"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ca72aabb-3312-417a-a952-d8b5d1c6c593">
+                    <propertyInstance
+                      Id="8f01868f-e2b1-4fd6-ba2f-4c3c4a1fe470"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6972ee63-e4b8-4f2e-9c34-79845d6708c9">
+                    <propertyInstance
+                      Id="1a654a01-230d-436f-bb95-82f89fa24463"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7cf4d98b-82fc-4a7c-8072-09c4d80d0694">
+                    <propertyInstance
+                      Id="4210e28b-fd92-401a-a4f5-9135dfdb0591"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="73070a5c-7f90-4c7e-87df-dcece97a16d7">
+                    <propertyInstance
+                      Id="64c26e51-d777-4494-b82d-496b27de070f"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="AcroniManager.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a29eb289-4e77-476e-bf34-ae851d05922d"
+            name="Definition"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="12831269-4ff4-40da-9930-8dbc3b4b039e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase Member%3DDefinition"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="66a63a3b-fefd-45cf-8b63-49bdfaaf8977"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55f26b42-6884-4643-bb23-15c2fb29e7a8">
+                    <propertyInstance
+                      Id="b746354a-db87-41c0-b029-b1cb66609e84"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78389611-d6ae-4c00-b4d2-071e39a3bc3a">
+                    <propertyInstance
+                      Id="139986f4-69ae-4a95-a398-c795e6c4fe6a"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e7c4b961-3527-4cb8-8146-dec687477de6">
+                    <propertyInstance
+                      Id="8426026f-2fdb-4df1-8586-2f8ae39c2664"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da509d32-0e40-48c8-9458-bed0f005b3d4">
+                    <propertyInstance
+                      Id="2ba97a44-0fbc-42a1-b206-00b96f816092"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a2dc36b7-9cdd-4055-a9bf-2d99060ad728">
+                    <propertyInstance
+                      Id="ac8e1e50-d7ac-4482-a8a9-31e9fc40fd9f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0882d743-f511-4f97-9b6b-a490428e73ad">
+                    <propertyInstance
+                      Id="02d058c4-6606-4eab-93bc-1036d86b0a08"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8cab8428-14e7-49c3-9c08-88fe3d2e7c6d">
+                    <propertyInstance
+                      Id="b953e9fd-6a7a-45dd-9610-a41c5546fdab"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="AcroniManager.Architecture.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2c8fc6e6-8817-46f5-898c-df1f46c293d0"
+            name="Categories"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="de12d828-377c-486a-8f62-d5d127f408ba"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase Member%3DCategories"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="81a065c3-830b-4293-b4ff-275c13605273"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d7621f7-1059-4f2f-9de9-636ae6c68bde">
+                    <propertyInstance
+                      Id="f43c4d36-47f1-4731-b7cb-6270b2aa51e9"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6c439fe-3e1d-4705-a20e-dd97b87f35ec">
+                    <propertyInstance
+                      Id="475db04d-0cb0-43a3-8ca0-7c10df39f3f2"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="faab1365-eb4b-455a-b951-25ef5050bb6e">
+                    <propertyInstance
+                      Id="bd7ba6ac-7a90-400d-8442-fb8775ace19f"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ae8aa3d1-a266-4aa3-b04e-e00ba31c0bd0">
+                    <propertyInstance
+                      Id="d615bef4-09cf-4aa6-9f91-9c8593d1764f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c953aa22-f844-4543-9eaf-8bfd69b0d25f">
+                    <propertyInstance
+                      Id="f734b2b6-161b-40db-b3bb-a689018f2af9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="8566f347-57ca-4669-891b-18135096ca3a"
+                LastKnownName="List&lt;ResourceCategory‎&gt;"
+                LastKnownLocation="Package_1259.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c82d3c94-679f-46e3-adb0-c0d2952556fd"
+            name="ToString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3ec8afd8-efc3-4b33-8344-6d89ec6d7bd9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase Member%3DToString"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0edf8cd5-35e7-42f6-9054-85bbf9f338d2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9862465f-b16a-40e9-a1e2-8132235eb75b">
+                    <propertyInstance
+                      Id="79c84b3a-0422-4239-b6c2-44baa0e8107b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="53d16955-0f61-430d-a157-c601d0d500c7">
+                    <propertyInstance
+                      Id="e7d660f6-1636-4e9e-b91d-8904085ad5da"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7f13e63-f40e-4cdc-a050-ad13d88dae78">
+                    <propertyInstance
+                      Id="348fa342-e81b-4ade-91f4-8ea90fcc7208"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b7e0d0ce-204f-4f57-8c4a-534ba57f8f81">
+                    <propertyInstance
+                      Id="767c4e61-c045-4d93-bd7b-b623e4af314f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23c4b375-9fce-4eef-a761-c7359a918b20">
+                    <propertyInstance
+                      Id="1257ea56-1bf2-4be4-b338-1823ae834984"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d693098f-c447-4238-b6d4-69f5effa2d62">
+                    <propertyInstance
+                      Id="987c70b4-b11f-4e0a-84c1-1544bf49c757"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="655aaf5e-bdfa-4e2e-bb00-37786470c1a8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="AcroniManager.Architecture.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ccf54417-213a-4fde-acf5-6467a465a9c2"
+            name="FoundMatchBase"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="04ad3f64-6405-4265-a766-bb3b56221b4e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Matcher Type%3DFoundMatchBase Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="24a3a922-7695-4829-aa42-450a6296f3e4"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71636afa-1e01-44cf-98ed-0ea9bf424d4c">
+                    <propertyInstance
+                      Id="2757a8ff-24aa-43ab-abef-eeac03df5a65"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ce0e92f-3264-4bdb-8aef-c6a8404cef6b">
+                    <propertyInstance
+                      Id="f0bb528c-2c45-4d0d-a11a-879aea65553e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="976d675a-d53f-4aec-8307-43d66a3fa631">
+                    <propertyInstance
+                      Id="5819afe2-c583-4a70-93ac-3bbd7aa5a22e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="11022183-c44a-4030-81bd-5c270ea254e7">
+                    <propertyInstance
+                      Id="838401ab-3cdb-4a00-bb00-910da2ad6fd2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="508262a1-600b-441a-acd2-a59da52f1dc2">
+                    <propertyInstance
+                      Id="e14afd94-3198-4973-809e-f2d1efa645e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c937b78a-e6a8-4768-a4d4-b51c12e9f2f0">
+                    <propertyInstance
+                      Id="fd8bb566-67e7-444b-97bd-3e6773cd8c8d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

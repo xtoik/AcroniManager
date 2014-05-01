@@ -505,9 +505,9 @@ namespace AcroniManager.AcroBrowser
         {
             if (acronyms != null)
             {
+                btnReplaceAll.Focus();
                 rtxtInput.SuspendLayout();
-                LockWindowUpdate(rtxtInput.Handle);
-                storeInitialPosition();
+                LockWindowUpdate(rtxtInput.Handle);                
                 foreach (FoundAcronym acronym in acronyms)
                 {
                     rtxtInput.SelectionStart = acronym.Index;
@@ -518,15 +518,16 @@ namespace AcroniManager.AcroBrowser
                         acronym.Meaning = null;
                     }
                 }
-                restoreInitialPosition();
                 LockWindowUpdate(IntPtr.Zero);
                 rtxtInput.ResumeLayout();
+                rtxtInput.SelectionStart = acronyms.First().Index;
+                rtxtInput.Focus();                
+                rtxtInput.SelectionLength = 0;
             }
         }
 
         private void storeInitialPosition()
         {
-            _initialPoint = rtxtInputScrollPos;
             _initialIndex = rtxtInput.SelectionStart;
         }
 
@@ -534,27 +535,7 @@ namespace AcroniManager.AcroBrowser
         {
             rtxtInput.SelectionStart = _initialIndex;
             rtxtInput.SelectionLength = 0;
-            rtxtInputScrollPos = _initialPoint;
-        }
-
-        private Point rtxtInputScrollPos
-        {
-            get
-            {
-                const int EM_GETSCROLLPOS = 0x0400 + 221;
-                Point pt = new Point();
-
-                SendMessage(rtxtInput.Handle, EM_GETSCROLLPOS, 0, ref pt);
-                return pt;
-            }
-
-            set
-            {
-                const int EM_SETSCROLLPOS = 0x0400 + 222;
-
-                SendMessage(rtxtInput.Handle, EM_SETSCROLLPOS, 0, ref value);
-            }
-        }
+        }        
 
         #endregion Replacing tab        
     }

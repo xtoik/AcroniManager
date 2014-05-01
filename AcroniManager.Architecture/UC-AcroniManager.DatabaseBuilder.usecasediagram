@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="52590d97-5831-4f0a-b926-54066ee3b542" name="AcroniManager.DatabaseBuilder" linkedPackageId="02637ba0-f979-4117-b963-e9296f0d2aae" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="c4f816f7-5a7d-4dfd-9c45-0d9123ca4c73">
+      <profileInstance Id="6ba4495b-a223-4185-84a9-afab08bc9e66" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f0dc9385-3b71-4718-b61f-0c460a805bb2">
+      <profileInstance Id="528ad30f-1601-42ae-8333-063490cc4e83" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="e1fe2a11-65c9-45b3-8f26-5f7919b65980" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a884f78b-962b-4ce6-b5d9-1e15ed783949" />
+        <targetEnds>
+          <association Id="6e03f83a-5149-425a-b13d-0b8325a41369" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Create DB" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="72e4d87e-3827-4328-8075-191d5f2c24b2" LastKnownName="Create DB" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ace31f77-2c09-48c2-a8c7-a3feca2da645" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="92704881-6297-4ef0-9d3c-e9dd225e49a4" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b566bc1e-8e77-45c1-afb1-1269ad98773e" name="Create DB" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a098e96d-4b29-40c5-80e8-c899af66abbe" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="91a4b427-765b-493e-bdc2-a7341f2b7832" />
+          </association>
+          <association Id="bb63178a-14b9-4c83-8a9f-18dcbaba457c" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Validate DB" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="91edaf8b-4e77-4e77-be71-fc51c185558c" LastKnownName="Validate DB" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2401941-7dd3-49c4-871a-9ae6b915b1bd" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e52e2144-df2f-4e00-acb7-765121fe1ce7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="51124bbb-d017-4bfd-8075-2aa8fb535188" name="Validate DB" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b51eb4ab-3050-4fd3-974d-4bb86cd24e80" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f929e47b-2ac9-4a2e-8318-be51493826e8" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="cf224c43-d8b1-45d9-ac23-5963bc8a23e9" name="Database Bulder" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f1cd6f8a-85a2-4516-a95b-1cdf39cdeb17" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="72e4d87e-3827-4328-8075-191d5f2c24b2" name="Create DB" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6ccbbf1b-7b98-47a6-95b8-9897ed4cc110" />
+        <subjects>
+          <subsystemMoniker Id="cf224c43-d8b1-45d9-ac23-5963bc8a23e9" LastKnownName="Database Bulder" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="91edaf8b-4e77-4e77-be71-fc51c185558c" name="Validate DB" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="391dc09b-19e4-4011-b785-a54f8c6fa191" />
+        <subjects>
+          <subsystemMoniker Id="cf224c43-d8b1-45d9-ac23-5963bc8a23e9" LastKnownName="Database Bulder" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="452805dd-cfbc-4b48-830a-651fa32c8e90" name="Power User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7eb3e000-ce8c-439c-a8a5-2c003a308cc4" />
+        <generalsInternal>
+          <generalization Id="94bd178c-e5ec-49ed-9831-d4073207b2f4" isSubstitutable="false">
+            <actorMoniker Id="e1fe2a11-65c9-45b3-8f26-5f7919b65980" LastKnownName="User" />
+            <elementDefinition Id="8d92321e-4104-454d-a158-7fabb0ddc4e5" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="4bcda9ee-3ac5-42c9-8e8c-028e8ddd9ffa" isDerived="false" sourceEndRoleName="Power User" targetEndRoleName="Change Leecher Configuration" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="999515d6-d2e1-4baf-a01f-a66ce3b0f9f1" LastKnownName="Change Leecher Configuration" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="084c6446-94f0-4b8c-a74c-ab91fded5dfd" name="Power User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0fa12eab-dcd6-41e1-b7fb-2b01226373f2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="90c1100d-1b2d-4bf9-9744-bbad699fcb49" name="Change Leecher Configuration" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="e5214421-9534-4d7f-88ba-8c7c93e3be35" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c55ae1b7-2b1d-4b49-8d24-43618e510a77" />
+          </association>
+          <association Id="ad3dc98c-b96a-4d9e-a28f-ac4cc2293efa" isDerived="false" sourceEndRoleName="Power User" targetEndRoleName="Change Pattern Configuration" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3b09af58-1d6d-4cd5-b8b9-31093a06ea99" LastKnownName="Change Pattern Configuration" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="01570cf3-490f-4832-a700-14c8cc02bc1a" name="Power User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0fdee43b-d182-4c60-8660-1042bc364314" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2f994ec5-9802-4814-9cc2-0a1a1d0a252f" name="Change Pattern Configuration" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="adb29074-1dc1-4cc6-86cd-d3c6e498e94b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="57a6d48c-8ab1-4baa-8881-6e6e2e9f72d8" />
+          </association>
+          <association Id="71355595-dcfb-4969-b3d1-d945e113b30f" isDerived="false" sourceEndRoleName="Power User" targetEndRoleName="Change Validator Configuration" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="04df9429-c203-47b1-aef9-fb7b2d75449a" LastKnownName="Change Validator Configuration" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ae98176c-7e31-4ac8-8e2d-a2ded2f31f6f" name="Power User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f3b2dc60-f86e-42e9-a2fd-50ac3ff4359a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1fc1e9ff-9e99-4d00-8326-49c242e6ee64" name="Change Validator Configuration" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="144c290d-40c8-49eb-a6fd-778190ae9149" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0b7f9d08-6319-4506-a8d7-68ce1bc279b0" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3b09af58-1d6d-4cd5-b8b9-31093a06ea99" name="Change Pattern Configuration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2df2ea50-d39f-44a8-863f-d7d20ae12ea8" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="999515d6-d2e1-4baf-a01f-a66ce3b0f9f1" name="Change Leecher Configuration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a01d925-a72c-4531-81db-19f821845812" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="04df9429-c203-47b1-aef9-fb7b2d75449a" name="Change Validator Configuration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3720d194-594b-4c9d-a560-8395bbd8f9ea" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="629d32f4-237b-4381-a0a2-c00cfca1ecb8" name="Developer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8485a821-5722-4a03-9402-bae91312347e" />
+        <generalsInternal>
+          <generalization Id="94fecbc5-0b64-4455-8dec-8fd553726e9e" isSubstitutable="false">
+            <actorMoniker Id="452805dd-cfbc-4b48-830a-651fa32c8e90" LastKnownName="Power User" />
+            <elementDefinition Id="45405233-3857-43e8-8e88-a0eb0308febb" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="a5b9b49b-74d9-4a7b-b632-6c4054ca6d34" isDerived="false" sourceEndRoleName="Developer" targetEndRoleName="Develop Validator" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e9555b0f-47aa-41f6-9309-c511e4273b3a" LastKnownName="Develop Validator" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c646d23f-db36-4cfd-8431-f9fbd7760184" name="Developer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d4e5c856-078b-4e8a-9d8c-eb81620e3f5d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4e86529f-58e9-4e3d-b8cd-7909b65348e5" name="Develop Validator" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bf481de3-46cd-4010-a15d-27081367ff61" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="73b81183-3fd6-40c3-9651-d42eda830c7f" />
+          </association>
+          <association Id="d3b4e9ff-0b8d-4af4-b39f-025cb8739c77" isDerived="false" sourceEndRoleName="Developer" targetEndRoleName="Develop Pattern" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4d9ec91e-5719-4725-b766-a47ab63945e0" LastKnownName="Develop Pattern" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a5f829a-438e-40e8-99b5-4353f1f56198" name="Developer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b1108c86-6a7a-48b3-94f3-de6cf1bf9e00" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9a0842e8-40fc-4333-ba47-d46c9b0eba7f" name="Develop Pattern" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="0f86a838-bada-4dd0-a884-81f881cd65be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7ca6a040-a1ee-4e1b-bf27-b94487da4d12" />
+          </association>
+          <association Id="ccd3b1cd-6d45-4562-b0f7-25e6732c3673" isDerived="false" sourceEndRoleName="Developer" targetEndRoleName="Develop Leecher" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5023ba0f-cf0b-4eff-8d3d-5eee1da69bb5" LastKnownName="Develop Leecher" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="99cbca13-9f91-46ad-9e29-5139a7cacdf6" name="Developer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="899d3d73-ab1d-489e-ac63-d99fb9f1fd1c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b52e57b5-503b-4f16-8887-1b002d013acb" name="Develop Leecher" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="378c5f35-1407-440f-a916-bdba7ccccca2" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="bcbf5758-f8d8-4326-9607-671a873c3bb5" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5023ba0f-cf0b-4eff-8d3d-5eee1da69bb5" name="Develop Leecher" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2f8d6f80-c87f-40d7-ad72-c29417a9b90c" />
+        <extendedCases>
+          <extend Id="4dce1979-2a51-44a0-acc2-bd7159dfa31e">
+            <useCaseMoniker Id="999515d6-d2e1-4baf-a01f-a66ce3b0f9f1" LastKnownName="Change Leecher Configuration" />
+            <elementDefinition Id="c36952de-a393-404c-8f99-baff5d2bc1b7" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4d9ec91e-5719-4725-b766-a47ab63945e0" name="Develop Pattern" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="06aa0087-7a15-4b74-b598-3efd28493a3d" />
+        <extendedCases>
+          <extend Id="bd1b3f6f-67a7-43be-82c6-774c0a00f5c7">
+            <useCaseMoniker Id="3b09af58-1d6d-4cd5-b8b9-31093a06ea99" LastKnownName="Change Pattern Configuration" />
+            <elementDefinition Id="3ad042cd-500f-4813-9084-846238902d86" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e9555b0f-47aa-41f6-9309-c511e4273b3a" name="Develop Validator" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="3a2cf4fa-bb92-487a-9561-18c53d80cfdb" />
+        <extendedCases>
+          <extend Id="3ebb791b-2c8b-4a0a-bfc5-fb78db63f15d">
+            <useCaseMoniker Id="04df9429-c203-47b1-aef9-fb7b2d75449a" LastKnownName="Change Validator Configuration" />
+            <elementDefinition Id="4b9f6d62-ce32-4d6a-8175-d4aa1c21a6aa" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="02637ba0-f979-4117-b963-e9296f0d2aae" name="AcroniManager.Architecture">
+    <elementDefinition Id="2a161a2d-84fd-42df-8cc8-e335f538d2f5" />
+  </package>
+</useCaseModelRoot>

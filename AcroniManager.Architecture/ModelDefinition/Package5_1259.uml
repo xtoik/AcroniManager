@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="01a7e344-ca1a-43d9-9096-e0ce3d2a67e8"
+  name="Common"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c042cb71-f82b-427e-bd54-d2a249b647c2"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager.Core.Common"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="fb30054f-11dc-4c6b-bdeb-2929be5b2719">
+      <profileInstance
+        Id="e1e386f6-307d-449e-8419-03046f2ad7bc"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ac9d9b2c-e904-4486-88c2-052f8aba9d98"
+        name="ConfigurableBase"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9a89c59b-8369-4187-93e1-470376772c0e"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Common Type%3DConfigurableBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="98abbec7-86c6-4c12-95f1-782a69a00bcd"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0ed0dece-3f49-4785-9581-23b6d7eaf69b">
+                <propertyInstance
+                  Id="7319a36d-c3a3-4bfb-8b88-bde6a6f589e2"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="06104f83-deb7-43d2-9199-a556fcb6da65">
+                <propertyInstance
+                  Id="854189c3-b955-45f5-89e6-24e4fb52ac87"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f24fa9f9-eb1e-404f-b41d-ef4ad85a34ce">
+                <propertyInstance
+                  Id="41fd80e6-014e-4b27-abb6-78837ba44cc7"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="61f79e5b-6f2c-4db7-b77c-99c417e7def2">
+                <propertyInstance
+                  Id="8f4ab0a0-e846-4a7e-a72e-7a85fb22a249"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="55f8e3ab-c67a-4de8-b18b-e59836297166">
+                <propertyInstance
+                  Id="464b8e9b-0c0a-4a1c-9d23-2688d11866db"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

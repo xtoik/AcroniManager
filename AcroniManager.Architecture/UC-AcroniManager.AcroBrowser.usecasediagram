@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="2950b727-72e6-4563-81e9-c25d286f0e46" name="AcroniManager.AcroBrowser" linkedPackageId="e7855d8d-3f22-4cad-a5db-7797e6cfb1dc" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="b5bc08ad-0463-4532-bcd9-099c03e7808b">
+      <profileInstance Id="ddc79342-8ffd-438f-83cb-24c219d323cc" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="071c26d7-b335-46db-8c8a-5c84b1faa0f9">
+      <profileInstance Id="02786074-4d66-43a4-8ece-2251f4c2d44f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="1a80873d-1c25-4ec3-8bee-2a124d97a9bb" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d1cbd20b-069c-4afb-9145-9baf4db11d35" />
+        <targetEnds>
+          <association Id="a5797eb7-0e2d-435d-955a-b291f7a55932" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Navigate DB" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e93b49cd-7969-4f50-a2ec-a91177e0fb2b" LastKnownName="Navigate DB" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cf7b1e13-7958-40b7-9b07-cf2415277688" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2464946b-77d6-462f-b208-0f2087f34981" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8ea851f7-85ff-4434-8e10-053b63f2a9a0" name="Navigate DB" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="84342761-18dd-45d5-abd2-88293a4d5221" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="06fcc5ea-42d5-4cb3-bf0b-8dbb297d4812" />
+          </association>
+          <association Id="3d4983ec-92b2-44df-9bc4-64bdebc4cbdc" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Recognize acronyms in text" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0ca61922-1b8c-45d6-a925-879b80008d81" LastKnownName="Recognize acronyms in text" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5897998-660d-4045-9105-78c2f0092969" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c17b9d14-dba7-4a7b-baa1-42fd8b15db07" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4aaea4c8-5006-4637-b64d-d97d551a71b2" name="Recognize acronyms in text" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c1c7ee2d-913a-4d06-95bc-db0dcb82bb5e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="96556e8d-1410-4402-9a43-745f1baae317" />
+          </association>
+          <association Id="079be1ad-b83e-4ed4-b900-3a7beaf73e80" isDerived="false" sourceEndRoleName="User" targetEndRoleName="Replace acronyms in text" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b64cdc95-eb31-4f24-9feb-9302f218dd89" LastKnownName="Replace acronyms in text" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fd7d4808-95d5-4543-a663-25dac3559526" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="548423f5-079e-4b64-a616-765f182a199d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0ac51537-7a65-4429-b7cf-795b9c0ae863" name="Replace acronyms in text" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b56a8134-fa9e-4ff9-943f-6b3dd97633b7" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f28ce1eb-bcc8-4d5b-b3f5-6f3272319f72" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="b7a29573-70fa-48f9-baff-fe32c1a34ba3" name="AcroBrowser" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="eb42ea0d-4ef8-44a6-af2b-482e3ee66524" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="e93b49cd-7969-4f50-a2ec-a91177e0fb2b" name="Navigate DB" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7eeb9a0b-eccd-4d0e-9af7-07301fafad9d" />
+        <additions>
+          <include Id="5ad07456-3f29-482b-b5bc-a1f771d8513c">
+            <useCaseMoniker Id="aa063ff5-03ff-4fc6-b3aa-6da9aedc0421" LastKnownName="View acronym information" />
+            <elementDefinition Id="d8b1f69b-8e00-4927-ab78-fce8dc22bb7b" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b7a29573-70fa-48f9-baff-fe32c1a34ba3" LastKnownName="AcroBrowser" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="aa063ff5-03ff-4fc6-b3aa-6da9aedc0421" name="View acronym information" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="36499c93-2baa-4efd-8614-c95b3fc7fb94" />
+        <subjects>
+          <subsystemMoniker Id="b7a29573-70fa-48f9-baff-fe32c1a34ba3" LastKnownName="AcroBrowser" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0ca61922-1b8c-45d6-a925-879b80008d81" name="Recognize acronyms in text" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="edbd9a6c-45e5-447f-a9a1-a7c7c0dd6c1a" />
+        <additions>
+          <include Id="2e0dd9e7-9faf-42aa-8fbb-1523ede9e405">
+            <useCaseMoniker Id="aa063ff5-03ff-4fc6-b3aa-6da9aedc0421" LastKnownName="View acronym information" />
+            <elementDefinition Id="3e2f5750-5a9e-4c60-b165-94334681735d" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="b7a29573-70fa-48f9-baff-fe32c1a34ba3" LastKnownName="AcroBrowser" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="b64cdc95-eb31-4f24-9feb-9302f218dd89" name="Replace acronyms in text" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="099df75f-f6a9-4531-a03c-1b6bf82d2023" />
+        <extendedCases>
+          <extend Id="9f0292da-0996-481e-a899-7bca12102b5c">
+            <useCaseMoniker Id="0ca61922-1b8c-45d6-a925-879b80008d81" LastKnownName="Recognize acronyms in text" />
+            <elementDefinition Id="bf1186a0-5266-407f-a34c-71f67a51836a" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="b7a29573-70fa-48f9-baff-fe32c1a34ba3" LastKnownName="AcroBrowser" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <actor Id="dc501705-1650-47fb-a1dc-fb19908704e1" name="Power User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f0ed3441-6a28-4542-a5a2-c4d78aea3f2f" />
+        <generalsInternal>
+          <generalization Id="bc2adc55-405e-476a-a942-3495649c3544" isSubstitutable="false">
+            <actorMoniker Id="1a80873d-1c25-4ec3-8bee-2a124d97a9bb" LastKnownName="User" />
+            <elementDefinition Id="bfb3e5b5-81e1-4747-8fd6-c911fa31e479" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="b2482350-fae1-4795-a142-77dde876cde8" isDerived="false" sourceEndRoleName="Power User" targetEndRoleName="Change Meaning Selector Configuration" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="9c863f16-0efc-446c-bc4a-1ea89e01278c" LastKnownName="Change Meaning Selector Configuration" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8247efd7-234e-4507-bded-5ca0b7b5a616" name="Power User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="de80d5c9-9e23-487c-88e1-abda76efc1e1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ed82fb61-7fe5-45f3-a83d-1e2409db405a" name="Change Meaning Selector Configuration" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="18514d32-d4f6-4968-8652-5ec183e45a87" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f34270a6-20d5-4517-921e-9c849e691855" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="9c863f16-0efc-446c-bc4a-1ea89e01278c" name="Change Meaning Selector Configuration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ffb652b3-02ec-4152-b73a-ce75258d4234" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="8dd1c53f-47fd-4076-8f38-ffa14cb4c49d" name="Developer" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="698f6304-9096-41be-aeb1-b01632956f61" />
+        <generalsInternal>
+          <generalization Id="996c6fac-6d02-4eb2-b3fa-80b7657191e3" isSubstitutable="false">
+            <actorMoniker Id="dc501705-1650-47fb-a1dc-fb19908704e1" LastKnownName="Power User" />
+            <elementDefinition Id="470029d6-66bb-4787-adaa-ae48f7328dad" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="96d0fe9d-454f-4393-8462-ef1931b0ab6a" isDerived="false" sourceEndRoleName="Developer" targetEndRoleName="Develop Meaning Selector" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="5037aa0d-276f-4f60-a96e-74469bde97fb" LastKnownName="Develop Meaning Selector" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="208b16b4-6fe0-4af3-a14d-44603116f616" name="Developer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="51c27cf9-f5ee-4ebb-9786-815855ae0f2e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8f5dbc8e-278c-476d-aaf9-6e206214dad1" name="Develop Meaning Selector" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5979b53d-7008-43c8-bb89-b516f9606456" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7eccd05f-73ed-494f-982b-904d5048b42c" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="5037aa0d-276f-4f60-a96e-74469bde97fb" name="Develop Meaning Selector" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2775ec29-d918-4a5b-b210-0340a0fda124" />
+        <extendedCases>
+          <extend Id="5fdbb542-99a4-4b20-9aea-450a482008d4">
+            <useCaseMoniker Id="9c863f16-0efc-446c-bc4a-1ea89e01278c" LastKnownName="Change Meaning Selector Configuration" />
+            <elementDefinition Id="7b4cb722-e7f5-44ca-b42d-3e94113836f6" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e7855d8d-3f22-4cad-a5db-7797e6cfb1dc" name="AcroniManager.Architecture">
+    <elementDefinition Id="2a161a2d-84fd-42df-8cc8-e335f538d2f5" />
+  </package>
+</useCaseModelRoot>

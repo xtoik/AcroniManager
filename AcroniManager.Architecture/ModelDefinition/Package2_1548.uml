@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="a6dc2652-8356-4b05-a5b1-31523d13e059"
+  name="MeaningSelector"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="dcf2e0ba-5d83-45d0-8383-38cde9949755"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager.Core.MeaningSelector"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="a6973677-eca7-4bc4-a5f8-2c89e94ea534"
+        name="SelectedMeaningBase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d93332a5-3f87-439d-b449-ae4d05bcd7c6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.MeaningSelector Type%3DSelectedMeaningBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0f532bb4-6db3-4169-8586-c793efbc55d0"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="67dd7785-0803-4c5f-bbf5-5d666aed4344">
+                <propertyInstance
+                  Id="b90d644a-bd9b-42a5-987b-aa1d82cda890"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="50d6ffa3-089c-4095-8298-af7cd05d9e02">
+                <propertyInstance
+                  Id="fc898786-67fb-4ff4-b7ae-f132644e3f79"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c452cee8-b411-4e46-a671-c0271662f5f1">
+                <propertyInstance
+                  Id="af1ce761-cbf4-47fe-94a2-b5f93675e21e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="220898d1-070c-46f3-9da2-7ab916c4b01e">
+                <propertyInstance
+                  Id="a6a6a5d2-9cd1-4161-82e0-0e8cd1babcac"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="928593ef-4a63-4e01-9f43-8664991af817">
+                <propertyInstance
+                  Id="93e2b07b-9d58-4812-ace2-5842b23373b4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

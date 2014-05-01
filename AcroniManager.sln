@@ -30,6 +30,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Licence", "Licence", "{5FD7
 		EUPL Licence.txt = EUPL Licence.txt
 	EndProjectSection
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "AcroniManager.Architecture", "AcroniManager.Architecture\AcroniManager.Architecture.modelproj", "{1162B887-A514-4796-B433-405FC705860A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B8C1F9A-3A8D-44DC-B1A5-83F8F2E47C75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1162B887-A514-4796-B433-405FC705860A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1162B887-A514-4796-B433-405FC705860A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1162B887-A514-4796-B433-405FC705860A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1162B887-A514-4796-B433-405FC705860A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

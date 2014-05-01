@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="d76ddc8f-d48b-4197-a525-b3ba2b8b865e"
+  name="LinqToWiki"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="42bbaefc-795e-4c82-b998-9abd8a9d76a5"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DLinqToWiki"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a6d53671-9fbb-490a-934e-700f9a5e70ca"
+        LastKnownName="Generated"
+        LastKnownLocation="Package3_1834.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="042b1b10-13d3-4d6a-9119-74ed92dde447"
+        name="PagesSource&lt;Page‎&gt;"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2631d7ae-a904-4b75-8ece-6e3d9e906516"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7e209df7-7254-4d88-929c-0ced24f36bf6">
+                <propertyInstance
+                  Id="35a20586-bba3-4cf9-b7af-3ff50e056c4d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d7b89d96-752d-4f8a-bb7d-a423d6b3e839">
+                <propertyInstance
+                  Id="15f16188-4d90-469d-a754-dab41d8fbdf6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c18533b1-e288-44dd-8f3a-57319072e753">
+                <propertyInstance
+                  Id="b27cd2c6-276d-4ff3-b016-66992ed7788e"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b0da6bb2-aa99-409d-a553-a9cf91c4bb23">
+                <propertyInstance
+                  Id="79ffc643-e537-4f9e-b77c-ce7424be543f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f2e55086-2df4-4d1a-b7f0-fe14193e333c">
+                <propertyInstance
+                  Id="2616e8a6-d396-4950-9c78-24c3809a52b2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="c6915823-0c42-4d71-811f-914d39b357c0">
+            <redefinableTemplateSignatureMoniker
+              Id="fe894cf5-ef70-4dcc-baaa-c2ae3a667161"
+              LastKnownLocation="Package2_1834.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="922c31c3-e1b7-47f3-aad7-a97da490e01b">
+                  <actuals>
+                    <classMoniker
+                      Id="a2e85389-b405-45ab-b161-603de5866310"
+                      LastKnownName="Page"
+                      LastKnownLocation="Package3_1834.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="a4568c8e-12a4-46bb-8c7c-bb256b3a3baf"
+                      LastKnownLocation="Package2_1834.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bb464e56-7e6a-457f-aefd-1fa02dcf4c96"
+        name="PagesSource"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="08a9e46d-a88d-4beb-b959-294763b3cb8c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2Fpackages%2FLinqToWiki.Core.1.2.3%2Flib%2Fnet40-client%2FLinqToWiki.Core.dll&quot; Namespace%3DLinqToWiki Type%3D(Name%3DPagesSource GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a81c7ec5-0cee-4798-8816-a697650826e9"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="406224fe-2774-42cf-bc31-8a5f753a5c35">
+                <propertyInstance
+                  Id="e479f04a-4950-4ccd-a838-46005c96b189"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="84a554ae-2380-47ea-906b-7f92074f72a9">
+                <propertyInstance
+                  Id="2e6113b0-1d8f-41e0-b747-d718cc688515"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2a99ced-2574-4c61-92c8-b7c097f68cc8">
+                <propertyInstance
+                  Id="8d70893b-6cb9-46af-8903-6cf8db39f6ab"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="649b1cb2-038e-45dd-8fa6-37bfc1c782a4">
+                <propertyInstance
+                  Id="c77449e0-a9d9-48cc-a303-f69502b20559"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d2fe186a-aa59-4cdf-9bc3-2790d7a183de">
+                <propertyInstance
+                  Id="9006ab0f-e9d2-495d-be19-7698c13fe2e8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="fe894cf5-ef70-4dcc-baaa-c2ae3a667161"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="a4568c8e-12a4-46bb-8c7c-bb256b3a3baf">
+                <referencesInternal>
+                  <reference
+                    Id="9557620d-ecc2-4507-9d04-aa3027e16ae2"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2Fpackages%2FLinqToWiki.Core.1.2.3%2Flib%2Fnet40-client%2FLinqToWiki.Core.dll&quot; Namespace%3DLinqToWiki Type%3D(Name%3DPagesSource GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="3ba75c88-c556-45b8-8415-edc0e884b44c"
+                    name="TPage"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

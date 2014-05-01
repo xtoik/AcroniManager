@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ec53067b-6a1d-4205-8086-4fd9bd155a22" name="AcroniManager.AcroBrowser" linkedPackageId="410af8dc-d216-4524-af2e-29134b10847b" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a489c347-da15-4c98-be01-d6fa69f0fabe">
+      <profileInstance Id="2aec4225-a70a-40a5-9ec7-c0f839fb3a49" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="04fa5fd7-e4e1-45bf-a923-b4ecfc2db9a6">
+      <profileInstance Id="a028072b-934d-48cc-aacd-4803d260e881" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="c52ce2d8-e0c0-4e63-996f-56813fdafe15" name="AcroniManager.AcroBrowser" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="979a811d-8e12-4fc2-a8bd-074652a3ffa4" />
+        <ownedAttributesInternal>
+          <providedInterface Id="2ba86be1-9208-403f-a8cc-d9cbe2587f5e" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="9a7b36fc-04e1-410b-93d9-06ee7c1bcaff" />
+            <targetNamedElementsInternal>
+              <connector Id="b344c224-a171-4ef2-aeb7-83f4ac77140c" isLeaf="false" isStatic="false">
+                <partMoniker Id="879e2fcb-cb2e-412b-b955-ea23af608766" LastKnownName="AcroniManager" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="31a32864-28d7-43fb-afce-c1215f0b1def">
+                      <elementDefinition Id="69e852f2-3290-453a-98cc-04c28c1d7509" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="6deecc44-e790-4b6f-8816-f49c4b2630ba">
+                      <elementDefinition Id="0ff354ce-697e-463f-9e6a-722742983132" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="58d91678-1d76-4bb5-b60b-20cc7b7a05ee" LastKnownName="Port2" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="acd2c988-29d0-4780-b401-96c0e4f722b7" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="cbda6510-465e-4e8d-986b-91b107272edd" LastKnownName="Search Acronyms" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="a3084ac3-78dc-4c17-a584-869153ce174d" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="dfa1c62f-5db1-4ff8-9c77-2b2037873b73" />
+            <targetNamedElementsInternal>
+              <connector Id="914b6483-1a3a-482f-8324-c22983e19023" isLeaf="false" isStatic="false">
+                <partMoniker Id="879e2fcb-cb2e-412b-b955-ea23af608766" LastKnownName="AcroniManager" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="da95e3cc-8416-42f4-975a-ce21fb3b66f0">
+                      <elementDefinition Id="44aa8d1a-88ae-4a88-83e8-a0f7892d2d48" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="65dc1e8b-096e-4917-a414-2d2e4dd3cd6f">
+                      <elementDefinition Id="1e7cc72b-11d9-4b76-9c06-8f222b840b91" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="0bc7ba9d-9599-475f-a59f-9e1397789690" LastKnownName="Port3" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="c11db8e7-4257-4569-9ffe-182867f04781" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="8092b647-253f-48df-bd06-6d7daf139290" LastKnownName="Highlight Acronyms" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="3ac10704-2684-4688-b64d-3625f424efdd" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="f5eb5963-b7b0-4a0d-bc6d-0ae9993c049a" />
+            <targetNamedElementsInternal>
+              <connector Id="e7639727-5213-45ed-aee3-852e61497da1" isLeaf="false" isStatic="false">
+                <partMoniker Id="879e2fcb-cb2e-412b-b955-ea23af608766" LastKnownName="AcroniManager" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="8d3d02d1-627d-4939-8c32-ba6b16595bea">
+                      <elementDefinition Id="6fbd75c6-e8ce-4f26-9336-3454febc7d9f" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="da625c41-bc5b-4703-962b-9d8de74b277e">
+                      <elementDefinition Id="1cb71129-6b6a-4b43-844b-1b0c9e37b7a9" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="3fb68f20-26eb-4fc6-a81c-c7d5353c9d43" LastKnownName="Port4" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="9d446c5f-3b77-4e6d-bc99-12adc77852f7" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="168207c8-281c-4ad2-89bd-5b3958a0ec1b" LastKnownName="Get Acronym Meaning" />
+            </type_NamedElement>
+          </providedInterface>
+          <part Id="879e2fcb-cb2e-412b-b955-ea23af608766" name="AcroniManager" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="dffa070e-b500-407a-a7e2-8a3141a260b2" />
+            <targetNamedElementsInternal>
+              <connector Id="558f3541-ad23-4af1-a051-e28b95f13524" isLeaf="false" isStatic="false">
+                <partMoniker Id="343fcb17-5502-47e0-a0d4-9788b6d2c476" LastKnownName="MeaningSelector" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="a13a4acb-e341-489c-8277-98ab970852d2">
+                      <elementDefinition Id="c67a78cf-0a8e-47df-a7f5-772b41da3bd9" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="b5ae50af-d088-427c-8bce-4bb00f4963bc" LastKnownName="Port5" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="fed64b0d-82b1-4026-9380-11eb0d1c98a3">
+                      <elementDefinition Id="ba1fcb2b-2854-4e15-be5f-961b45faf481" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="ceba48b5-1128-4c76-b9a8-35b4ff19176b" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="764bea78-97d6-497a-a160-afef23100463" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="705992fe-2243-4a0c-9f80-136cc36cd5ba" LastKnownName="AcroniManager.Core" />
+            </type_NamedElement>
+          </part>
+          <providedInterface Id="d6dd2cbf-9d9d-431d-9e3f-0628f27b6d17" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="82e1f5ea-4ac9-4972-aafb-ad6ee65d4c3f" />
+            <targetNamedElementsInternal>
+              <connector Id="6da86595-de88-451c-bb67-5ce24146e843" isLeaf="false" isStatic="false">
+                <partMoniker Id="879e2fcb-cb2e-412b-b955-ea23af608766" LastKnownName="AcroniManager" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="b92e2596-61e7-4b99-bbab-9e2eaeafc415">
+                      <elementDefinition Id="8426122c-b563-4797-895b-7b4c8b5a0950" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="8e434c32-806f-48ea-a89c-f1adbd6f2de3">
+                      <elementDefinition Id="d383eb11-c9c2-4903-ad82-5c267177cd61" />
+                      <portWithPart>
+                        <providedInterfaceMoniker Id="62bd2baa-d953-49b2-b71f-954fc1a9da35" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="7a7504bc-3f8c-4491-af78-edb75733b41a" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="80ed6ac9-3a72-48b6-96fc-49667c127daf" LastKnownName="Configuration" />
+            </type_NamedElement>
+          </providedInterface>
+          <part Id="343fcb17-5502-47e0-a0d4-9788b6d2c476" name="MeaningSelector" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="c4bdcdaa-508f-4acd-a53d-2902af4b2ed2" />
+            <type_NamedElement>
+              <componentMoniker Id="92342052-5efb-4398-9921-a6a872d176c6" LastKnownName="AcroniManager.MeaningSelectors" />
+            </type_NamedElement>
+          </part>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="cbda6510-465e-4e8d-986b-91b107272edd" name="Search Acronyms" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="eb6ed926-93c1-443e-a86f-b0ff89295425" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="8092b647-253f-48df-bd06-6d7daf139290" name="Highlight Acronyms" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="43814376-3c90-4db4-ba10-2254d1138ed8" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="168207c8-281c-4ad2-89bd-5b3958a0ec1b" name="Get Acronym Meaning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7baa0d1f-2066-45c2-a06c-b304624df7d3" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="705992fe-2243-4a0c-9f80-136cc36cd5ba" name="AcroniManager.Core" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ca91c048-f128-46cd-a292-af896cbd1c0b" />
+        <ownedAttributesInternal>
+          <providedInterface Id="62bd2baa-d953-49b2-b71f-954fc1a9da35" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="65db1316-b535-4496-a4aa-ca3615c220bc" />
+            <type_NamedElement>
+              <interfaceMoniker Id="e5313b57-2e07-4b6a-ba0e-b3715a8374e2" LastKnownName="AcroniManagerConfigurationSection" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="58d91678-1d76-4bb5-b60b-20cc7b7a05ee" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="5ae6e6da-0931-438d-9ea2-e4c2bdead9bd" />
+            <type_NamedElement>
+              <interfaceMoniker Id="82ccc3c1-091b-4fbe-8983-9172ce986938" LastKnownName="SearchAcronyms" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="0bc7ba9d-9599-475f-a59f-9e1397789690" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="1e029c29-9ed7-41a5-80c7-810f5572e38e" />
+            <type_NamedElement>
+              <interfaceMoniker Id="684fe617-7dba-43dc-a9eb-366d1ba80f08" LastKnownName="MatchAcronyms" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="3fb68f20-26eb-4fc6-a81c-c7d5353c9d43" name="Port4" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="5dca155d-7d4a-4bb3-ab40-b48faaab3949" />
+            <type_NamedElement>
+              <interfaceMoniker Id="c372241a-fc1e-44b5-9f79-37d90611769f" LastKnownName="GetAcronymMeaning" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="b5ae50af-d088-427c-8bce-4bb00f4963bc" name="Port5" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="b2377a7c-cb68-4a05-8168-f1d4a4d2d503" />
+            <type_NamedElement>
+              <interfaceMoniker Id="21a5a6e7-e8f6-4a2a-9fe0-7207df19abc3" LastKnownName="MeaningSelector" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="80ed6ac9-3a72-48b6-96fc-49667c127daf" name="Configuration" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9cfaafc6-c6c7-46fa-9d27-ac6ef17a7259" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="e5313b57-2e07-4b6a-ba0e-b3715a8374e2" name="AcroniManagerConfigurationSection" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9cb2911e-3882-44ca-9a0c-4cbdc11acfac" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="82ccc3c1-091b-4fbe-8983-9172ce986938" name="SearchAcronyms" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="30c9dd3f-9501-411b-9a02-974c220aff29" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="684fe617-7dba-43dc-a9eb-366d1ba80f08" name="MatchAcronyms" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b4f8c5b5-2a30-477e-80df-a4fbcf375114" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="c372241a-fc1e-44b5-9f79-37d90611769f" name="GetAcronymMeaning" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0a2ba6e0-ec67-465d-9f2c-9b77df747119" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="21a5a6e7-e8f6-4a2a-9fe0-7207df19abc3" name="MeaningSelector" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0ae73884-a9a9-4a9a-81f0-fdd97db84c20" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="92342052-5efb-4398-9921-a6a872d176c6" name="AcroniManager.MeaningSelectors" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="42f55a0e-f3e7-4406-86ad-f257f194141f" />
+        <ownedAttributesInternal>
+          <providedInterface Id="ceba48b5-1128-4c76-b9a8-35b4ff19176b" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="96b65b4f-4398-4f42-82ba-0ce82e8a6b54" />
+            <type_NamedElement>
+              <interfaceMoniker Id="cdabdb2d-b3cf-43ab-955f-2492e3c87cdb" LastKnownName="Meaning Selectors implementation" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="cdabdb2d-b3cf-43ab-955f-2492e3c87cdb" name="Meaning Selectors implementation" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f4e99d52-5e19-4e36-8b40-224d18005e90" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="410af8dc-d216-4524-af2e-29134b10847b" name="AcroniManager.Architecture">
+    <elementDefinition Id="2a161a2d-84fd-42df-8cc8-e335f538d2f5" />
+  </package>
+</componentModel>

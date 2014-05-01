@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e3a19f51-b0cc-4409-ace7-519bca59cf84"
+  name="Leecher"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="08532b35-eecd-4659-82a7-c5623c5a3747"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager.Core.Leecher"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5bde76b0-799e-46a7-b46c-30fde470b7d9"
+        name="LeechedResourceBase"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a23f6f80-d31e-4136-b232-ef1649618dbd"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Leecher Type%3DLeechedResourceBase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="64301d40-10d3-4b7f-9530-91b02520078a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45ff1a90-ff2f-407f-9ee7-8800201fc989">
+                <propertyInstance
+                  Id="0f499718-31f8-4210-85ff-875a9b869da8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1d78b2da-fd95-4e4d-b45e-e80474e099cc">
+                <propertyInstance
+                  Id="1492a45e-2eac-4ec9-b66a-892a16de5b0b"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fb5e4937-d918-4076-a1d2-9f837819442f">
+                <propertyInstance
+                  Id="7e2a901c-e45e-42bf-a501-539fdbfa79c2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8de35393-2689-4bc9-ad3e-3f946c414973">
+                <propertyInstance
+                  Id="a0a27d9c-fd68-40b7-8be9-c5a6ecf400e2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="84c5a429-e420-4af4-8f30-50bb927b5580">
+                <propertyInstance
+                  Id="0611dba5-159e-4c41-aa85-6dc48846c0d7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

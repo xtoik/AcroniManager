@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="84d78c7e-2bf9-4899-a2d7-cdf120560f28"
+  name="Factory"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="291c6947-d0c6-49f1-9430-b23e7e92ef10"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager.Core.Data.Factory"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="8ec8de4b-239a-4ec6-a9d8-978cbb64ec0f"
+        name="AcronymCreatedEventHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4eb30a0b-9269-45e6-85d9-9810f6a5ae54"
+            handle="viewcode://./CodeSchema_Delegate?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Data.Factory Type%3DAcronymCreatedEventHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a2915843-2e94-421f-8e10-b20f73110812"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b8918195-8f87-4bc4-93fa-cb5887b8b6db">
+                <propertyInstance
+                  Id="46048c12-736e-47e7-af5a-749374668226"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8cce9761-d4d6-40c6-a10d-0960236a12a9">
+                <propertyInstance
+                  Id="4952dbf4-d0bb-42c9-9496-b3cd86597fa4"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9c378e94-8481-4072-b1b4-19102da18eaf">
+                <propertyInstance
+                  Id="1b79f7d6-0aa4-4e73-8621-bac5ce8e88a2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e50b7258-8752-4d22-b630-8e105b46ed92"
+        name="MeaningCreatedEventHandler"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="96e7061a-253f-4ab1-be7e-7e10abd79c34"
+            handle="viewcode://./CodeSchema_Delegate?Assembly%3D&quot;file:%2F%2F%2FC:%2FDROPBOX%2FDropbox%2FUNED%2FPFC%2F03 - Desarrollo%2FAcroniManager%2FAcroniManager.Core%2Fbin%2FDebug%2FAcroniManager.Core.dll&quot; Namespace%3DAcroniManager.Core.Data.Factory Type%3DMeaningCreatedEventHandler"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="25665f07-70ce-4518-9523-89c60c8d0d6b"
+            name="delegate"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="74e09180-2dae-4d2f-9f81-f4a10d2878ca">
+                <propertyInstance
+                  Id="4d706e1d-3624-45b1-b600-a8ddc81ad875"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dd5ee4bd-13c6-4f7a-a54a-42101961d212">
+                <propertyInstance
+                  Id="bf18d0db-4800-467c-9aa9-7d260d371e23"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e48267a2-cece-49a7-9856-7ab2c96c5de9">
+                <propertyInstance
+                  Id="e743dd0a-e7ae-459a-9f31-0955bdff3a46"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

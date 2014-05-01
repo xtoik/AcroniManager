@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="50f68c34-1a05-4e70-97ef-760155a6e075"
+  name="AcroniManager"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="ae5a36b0-67b3-4083-a650-b9975b41c870"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DAcroniManager"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="e16f3dd9-df1a-4911-a9b0-042234240363"
+        LastKnownName="Core"
+        LastKnownLocation="Package_1258.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="76e0fe83-c8ed-4b51-baa2-366d8537adab"
+        LastKnownName="Core"
+        LastKnownLocation="Package1_1605.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4443903d-d529-4c16-b1d6-1e90f9910dce"
+        LastKnownName="Leechers"
+        LastKnownLocation="Package1_1834.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
